@@ -4,128 +4,29 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Isai Valdez | Cybersecurity Portfolio</title>
+  <meta name="description" content="Cyber-lab portfolio of Isai Valdez. Explore OSINT tools, network defense projects, and tactical intelligence systems." />
+  <meta name="author" content="Isai Valdez" />
+  <meta property="og:title" content="Isai Valdez | Cybersecurity Portfolio" />
+  <meta property="og:description" content="Cutting-edge projects in OSINT, network security, and threat intelligence." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://isaivaldez.github.io/isai-portfolio/assets/images/preview.jpg" />
+  <meta property="og:url" content="https://isaivaldez.github.io/isai-portfolio/" />
   <link rel="stylesheet" href="styles.css" />
-  <style>
-    body {
-      margin: 0;
-      background: #0d1117;
-      color: #f0f6fc;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-image: linear-gradient(315deg, #0d1117 0%, #1c1c1c 100%);
-      background-size: cover;
+  <link rel="icon" href="/assets/images/favicon.png" type="image/png" />
+  <script>
+    // Easter egg: open dev tools and type 'initShadowOS()'
+    function initShadowOS() {
+      console.log("\u001b[1;36mWelcome to ShadowOS - Tactical Mode Activated\u001b[0m");
+      alert("ShadowOS Terminal Access: Layer 1 Ready");
+      document.body.style.background = 'radial-gradient(circle, #0f0f0f, #000000)';
     }
-
-    header {
-      text-align: center;
-      padding: 2rem;
-      border-bottom: 1px solid #222;
-    }
-
-    header h1 {
-      font-size: 3rem;
-      color: #58a6ff;
-      animation: typing 3s steps(40, end), blink 0.75s step-end infinite;
-      white-space: nowrap;
-      overflow: hidden;
-      border-right: 3px solid #58a6ff;
-      width: fit-content;
-      margin: 0 auto;
-    }
-
-    @keyframes typing {
-      from { width: 0 }
-      to { width: 100% }
-    }
-
-    @keyframes blink {
-      from, to { border-color: transparent }
-      50% { border-color: #58a6ff; }
-    }
-
-    header p {
-      font-size: 1.1rem;
-      color: #8b949e;
-    }
-
-    nav {
-      margin-top: 1rem;
-    }
-
-    nav a {
-      color: #58a6ff;
-      margin: 0 1rem;
-      text-decoration: none;
-      font-weight: bold;
-      transition: color 0.3s ease;
-    }
-
-    nav a:hover {
-      color: #f0f6fc;
-    }
-
-    main {
-      padding: 2rem;
-      max-width: 1000px;
-      margin: auto;
-    }
-
-    #intro h2 {
-      color: #c9d1d9;
-      font-size: 2rem;
-    }
-
-    .project {
-      background: rgba(255, 255, 255, 0.05);
-      backdrop-filter: blur(8px);
-      padding: 1.5rem;
-      margin-bottom: 2rem;
-      border: 1px solid #30363d;
-      border-radius: 12px;
-      box-shadow: 0 0 10px rgba(88, 166, 255, 0.1);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .project:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 0 20px rgba(88, 166, 255, 0.2);
-    }
-
-    .project h3 a {
-      color: #58a6ff;
-      text-decoration: none;
-    }
-
-    .project h3 a:hover {
-      text-decoration: underline;
-    }
-
-    details summary {
-      margin-top: 1rem;
-      cursor: pointer;
-      color: #c9d1d9;
-    }
-
-    footer {
-      text-align: center;
-      padding: 2rem;
-      color: #8b949e;
-      border-top: 1px solid #222;
-    }
-
-    code {
-      background: #161b22;
-      padding: 0.2rem 0.4rem;
-      border-radius: 4px;
-      font-family: monospace;
-      color: #79c0ff;
-    }
-  </style>
+  </script>
 </head>
-<body>
+<body class="cyber-bg">
   <header>
-    <h1>Isai Valdez</h1>
-    <p>Cybersecurity • OSINT • Network Security</p>
-    <nav>
+    <h1 class="typewriter">Isai Valdez</h1>
+    <p class="glow-text">Cybersecurity • OSINT • Network Engineering</p>
+    <nav class="nav-bar">
       <a href="projects.html">Projects</a>
       <a href="resume.html">Résumé</a>
       <a href="contact.html">Contact</a>
@@ -133,51 +34,43 @@
   </header>
 
   <main>
-    <section id="intro">
+    <section id="intro" class="frost-card fade-in fade-delay-1">
       <h2>Welcome</h2>
-      <p>
-        I build tactical cybersecurity tools, intelligence labs, and hands-on environments to detect, defend, and demonstrate real-world threat mitigation strategies. This portfolio showcases my most meaningful work across OSINT, network security, and applied defense systems.
-      </p>
+      <p>I build tactical cybersecurity tools, intelligence labs, and hands-on environments to detect, defend, and demonstrate real-world threat mitigation strategies. This portfolio showcases my most meaningful work across OSINT, network security, and applied defense systems.</p>
     </section>
 
-    <section id="featured-projects">
-      <h2>Featured Projects</h2>
+    <section id="featured-projects" class="fade-in fade-delay-2">
+      <h2 class="glow-title">Featured Projects</h2>
 
-      <div class="project">
-        <h3><a href="https://github.com/IsaiAV/network-security-lab" target="_blank">Network Security Lab</a></h3>
-        <p>
-          A modular home-lab environment with real configurations for firewalls, VPNs, and IDS/IPS tools. Includes automation scripts, logs, diagrams, and active threat detection workflows.
-        </p>
+      <div class="project frost-card">
+        <h3><a href="https://github.com/IsaiAV/network-security-lab" target="_blank">🛡️ Network Security Lab</a></h3>
+        <p>A modular home-lab environment with real configurations for firewalls, VPNs, and IDS/IPS tools. Includes automation scripts, logs, diagrams, and active threat detection workflows.</p>
         <details>
-          <summary>How I built and tested this lab (click to expand)</summary>
+          <summary>How I built and tested this lab</summary>
           <ul>
-            <li><strong>Firewalls:</strong> Used <code>iptables</code> and simulated traffic with <code>nmap</code> and <code>curl</code>.</li>
-            <li><strong>IDS:</strong> Custom Suricata rules triggered by fake user agents and DNS queries.</li>
-            <li><strong>Brute Force:</strong> Simulated SSH brute force and verified Fail2Ban bans.</li>
-            <li><strong>VPNs:</strong> Encrypted routing and tunneling via OpenVPN and WireGuard.</li>
-            <li><strong>Logs:</strong> Captured and stored real-time log data for validation.</li>
+            <li><strong>Firewalls:</strong> <code>iptables</code>, <code>curl</code>, <code>nmap</code> testing.</li>
+            <li><strong>IDS:</strong> Custom Suricata signatures w/ DNS & User-Agent triggers.</li>
+            <li><strong>Brute Force:</strong> Simulated SSH attacks using Fail2Ban response.</li>
+            <li><strong>VPNs:</strong> WireGuard & OpenVPN tunneling and packet flow validation.</li>
+            <li><strong>Logs:</strong> Captured structured logs across all defensive layers.</li>
           </ul>
         </details>
       </div>
 
-      <div class="project">
-        <h3><a href="https://github.com/IsaiAV/shadowbreak-osint-core" target="_blank">Shadowbreak OSINT Core</a></h3>
-        <p>
-          Symbolic OSINT toolkit built with Python and NLP. Features entropy analysis, grooming pattern detection, and trauma-aware narrative scanning using the Shadow Constant (λ∇Ψ).
-        </p>
+      <div class="project frost-card">
+        <h3><a href="https://github.com/IsaiAV/shadowbreak-osint-core" target="_blank">🔍 Shadowbreak OSINT Core</a></h3>
+        <p>Symbolic OSINT toolkit using entropy detection, grooming pattern analysis, and narrative drift mapping via λ∇Ψ engine. Built to trace deep symbolic fields and behavioral anomalies.</p>
       </div>
 
-      <div class="project">
-        <h3><a href="https://shadowbreak-backend.onrender.com" target="_blank">Shadowbreak Project Website (Live)</a></h3>
-        <p>
-          Web presence and resource hub for my anti-trafficking nonprofit. Includes mission, tools, outreach programs, and system briefings.
-        </p>
+      <div class="project frost-card">
+        <h3><a href="https://shadowbreak-backend.onrender.com" target="_blank">🌐 Shadowbreak Project Website (Live)</a></h3>
+        <p>Web-based hub for the anti-trafficking initiative. Includes public tools, awareness campaigns, and system briefings powered by the Shadowbreak OSINT backend.</p>
       </div>
     </section>
   </main>
 
   <footer>
-    <p>© 2025 Isai Valdez. Built with code, purpose, and persistence.</p>
+    <p><span class="terminal-text">© 2025</span> Isai Valdez. Tactical code. Operational purpose.</p>
   </footer>
 </body>
 </html>
