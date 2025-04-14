@@ -1,10 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Projects | Isai Valdez</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    body {
+      background: #0d1117;
+      color: #f0f6fc;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    header {
+      text-align: center;
+      padding: 2rem;
+      border-bottom: 1px solid #222;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      color: #58a6ff;
+    }
+
+    nav {
+      margin-top: 1rem;
+    }
+
+    nav a {
+      color: #58a6ff;
+      margin: 0 1rem;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #f0f6fc;
+    }
+
+    main {
+      padding: 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    section h2 {
+      font-size: 2rem;
+      color: #c9d1d9;
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .project {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(8px);
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+      border: 1px solid #30363d;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(88, 166, 255, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .project:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 0 20px rgba(88, 166, 255, 0.2);
+    }
+
+    .project h3 a {
+      color: #58a6ff;
+      text-decoration: none;
+    }
+
+    .project h3 a:hover {
+      text-decoration: underline;
+    }
+
+    details summary {
+      cursor: pointer;
+      margin-top: 1rem;
+      font-weight: bold;
+      color: #c9d1d9;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      color: #8b949e;
+      border-top: 1px solid #222;
+    }
+
+    code {
+      background: #161b22;
+      padding: 0.2rem 0.4rem;
+      border-radius: 4px;
+      font-family: monospace;
+      color: #79c0ff;
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -21,14 +115,14 @@
       <h2>Project Portfolio</h2>
 
       <div class="project">
-        <h3><a href="https://github.com/IsaiAV/network-security-lab" target="_blank">🛡️ Network Security Lab</a></h3>
+        <h3><a href="https://github.com/IsaiAV/network-security-lab" target="_blank">Network Security Lab</a></h3>
         <p>Hands-on cybersecurity environment with real configs for firewalls, VPNs, and IDS. Includes logs, automation, and detailed testing examples.</p>
         <details>
           <summary>Testing Breakdown</summary>
           <ul>
             <li>Simulated attacks to trigger Suricata rules.</li>
             <li>SSH brute force to test Fail2Ban.</li>
-            <li>Used `nmap` and `curl` for firewall rule validation.</li>
+            <li>Used <code>nmap</code> and <code>curl</code> for firewall rule validation.</li>
             <li>Connected VPNs to verify routing and encryption.</li>
             <li>Documented results in real log files.</li>
           </ul>
@@ -36,15 +130,14 @@
       </div>
 
       <div class="project">
-        <h3><a href="https://github.com/IsaiAV/shadowbreak-osint-core" target="_blank">🔍 Shadowbreak OSINT Core</a></h3>
+        <h3><a href="https://github.com/IsaiAV/shadowbreak-osint-core" target="_blank">Shadowbreak OSINT Core</a></h3>
         <p>Symbolic OSINT toolkit with entropy scanning and grooming detection, designed to analyze narrative trauma patterns using AI + NLP.</p>
       </div>
 
       <div class="project">
-        <h3><a href="https://github.com/IsaiAV/shadowbreak.org" target="_blank">🌐 Shadowbreak Project Website</a></h3>
+        <h3><a href="https://shadowbreak-backend.onrender.com" target="_blank">Shadowbreak Project Website (Live)</a></h3>
         <p>Live website and digital home for my anti-trafficking nonprofit. Contains mission, resources, AI briefings, and community outreach strategies.</p>
       </div>
-
     </section>
   </main>
 
@@ -53,3 +146,4 @@
   </footer>
 </body>
 </html>
+
