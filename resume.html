@@ -102,12 +102,104 @@
 
 <body class="cyber-bg">
   <div id="preloader">[ loading encrypted résumé . . . ]</div>
+
+  
 <!-- Shadow Console -->
 <div id="commandConsole">
   <div class="console-output" id="consoleOutput"></div>
   <div class="console-input">
     <label for="terminalInput">: shadow_console@valdez ></label>
     <input id="terminalInput" type="text" autocomplete="off" placeholder="type a command..." />
+  <script>
+  const consoleEl = document.getElementById('commandConsole');
+  const inputEl = document.getElementById('terminalInput');
+  const outputEl = document.getElementById('consoleOutput');
+  let history = [];
+  let historyIndex = -1;
+  let consoleOpen = false;
+
+  const typeResponse = (text, delay = 30) => {
+    let i = 0;
+    const line = document.createElement('div');
+    outputEl.appendChild(line);
+    const interval = setInterval(() => {
+      if (i < text.length) {
+        line.textContent += text[i++];
+        outputEl.scrollTop = outputEl.scrollHeight;
+      } else {
+        clearInterval(interval);
+      }
+    }, delay);
+  };
+
+  const executeCommand = (cmd) => {
+    const lowerCmd = cmd.toLowerCase();
+    if (lowerCmd === 'help') {
+      typeResponse('📖 Available Commands:\n- help\n- exit\n- clear\n- uplink\n- whoami');
+    } else if (lowerCmd === 'uplink') {
+      typeResponse('🛰️ Uplink established. Grid connection confirmed.');
+    } else if (lowerCmd === 'exit') {
+      closeConsole();
+    } else if (lowerCmd === 'clear') {
+      outputEl.innerHTML = '';
+    } else if (lowerCmd === 'whoami') {
+      typeResponse('🔐 Isai Valdez – Cybersecurity Architect • OSINT • Tactical Code');
+    } else {
+      typeResponse(`⚠️ Unknown command: '${cmd}'`);
+    }
+  };
+
+  const openConsole = () => {
+    consoleEl.style.display = 'flex';
+    inputEl.focus();
+    consoleOpen = true;
+  };
+
+  const closeConsole = () => {
+    consoleEl.style.display = 'none';
+    inputEl.value = '';
+    historyIndex = -1;
+    consoleOpen = false;
+  };
+
+  document.addEventListener('keydown', (e) => {
+    if ((e.key === '/' || e.key === ':') && !consoleOpen) {
+      openConsole();
+    }
+    if (e.key === 'Escape' && consoleOpen) {
+      closeConsole();
+    }
+
+    if (e.key === 'Enter' && consoleOpen) {
+      const cmd = inputEl.value.trim();
+      if (cmd !== '') {
+        outputEl.innerHTML += `\n> ${cmd}`;
+        history.unshift(cmd);
+        executeCommand(cmd);
+        inputEl.value = '';
+      }
+    }
+
+    if (consoleOpen && e.key === 'ArrowUp') {
+      if (history.length > 0 && historyIndex < history.length - 1) {
+        historyIndex++;
+        inputEl.value = history[historyIndex];
+      }
+    }
+
+    if (consoleOpen && e.key === 'ArrowDown') {
+      if (historyIndex > 0) {
+        historyIndex--;
+        inputEl.value = history[historyIndex];
+      } else {
+        inputEl.value = '';
+        historyIndex = -1;
+      }
+    }
+  });
+</script>
+
+  
   </div>
 </div>
 
