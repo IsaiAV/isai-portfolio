@@ -89,7 +89,11 @@
 </head>
 <body class="cyber-bg matrix-bg">
   <div id="preloader">[ booting uplink . . . ]</div>
-  <div id="commandBar">: shadow_console@valdez >_</div>
+ <div id="commandBar">
+  <label for="terminalInput">: shadow_console@valdez ></label>
+  <input id="terminalInput" type="text" autocomplete="off" autofocus placeholder="type 'help' or 'exit'..." />
+</div>
+
   <div id="noiseOverlay"></div>
   <div id="helpModal">
     <strong>Command Console Help</strong><br><br>
