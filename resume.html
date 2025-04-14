@@ -1,10 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Résumé | Isai Valdez</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    body {
+      background: #0d1117;
+      color: #f0f6fc;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    header {
+      text-align: center;
+      padding: 2rem;
+      border-bottom: 1px solid #222;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      color: #58a6ff;
+    }
+
+    nav {
+      margin-top: 1rem;
+    }
+
+    nav a {
+      color: #58a6ff;
+      margin: 0 1rem;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #f0f6fc;
+    }
+
+    main {
+      padding: 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    section {
+      background: rgba(255, 255, 255, 0.04);
+      backdrop-filter: blur(8px);
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+      border-radius: 12px;
+      border: 1px solid #30363d;
+      box-shadow: 0 0 10px rgba(88, 166, 255, 0.1);
+    }
+
+    section h2 {
+      color: #c9d1d9;
+      border-left: 4px solid #58a6ff;
+      padding-left: 0.5rem;
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    ul {
+      list-style-type: square;
+      padding-left: 1.5rem;
+    }
+
+    li {
+      margin-bottom: 0.75rem;
+      line-height: 1.6;
+    }
+
+    a.download-link {
+      display: inline-block;
+      background-color: #58a6ff;
+      color: #0d1117;
+      padding: 0.75rem 1.25rem;
+      border-radius: 8px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    a.download-link:hover {
+      background-color: #79c0ff;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      color: #8b949e;
+      border-top: 1px solid #222;
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -19,7 +109,7 @@
   <main>
     <section>
       <h2>Download My Résumé</h2>
-      <p><a href="/Isai%20Valdez%20resume%202025.docx" download>📄 Click here to download my full résumé (Word)</a></p>
+      <p><a class="download-link" href="Isai%20Valdez%20resume%202025.docx" download>Download Résumé (Word)</a></p>
     </section>
 
     <section>
