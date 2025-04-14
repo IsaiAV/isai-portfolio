@@ -2,122 +2,62 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Résumé | Isai Valdez</title>
   <link rel="stylesheet" href="styles.css" />
+  <meta name="description" content="Résumé of Isai Valdez - Cybersecurity, OSINT, Network Defense Expert" />
+  <meta property="og:title" content="Isai Valdez Résumé" />
+  <meta property="og:description" content="Explore the professional experience and certifications of cybersecurity leader Isai Valdez." />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="Isai Valdez" />
+  <meta name="theme-color" content="#0d1117" />
+  <script>
+    document.addEventListener('keydown', e => {
+      if (e.ctrlKey && e.altKey && e.key === 'R') {
+        document.body.classList.toggle('resume-print-mode');
+        alert('Dark Print Mode Activated');
+      }
+    });
+  </script>
   <style>
-    body {
-      background: #0d1117;
-      color: #f0f6fc;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    body.resume-print-mode {
+      background: #ffffff;
+      color: #111111;
+      font-family: Georgia, serif;
     }
-
-    header {
-      text-align: center;
-      padding: 2rem;
-      border-bottom: 1px solid #222;
+    body.resume-print-mode a.download-link {
+      background-color: #111;
+      color: #fff;
     }
-
-    header h1 {
-      font-size: 2.5rem;
-      color: #58a6ff;
-    }
-
-    nav {
-      margin-top: 1rem;
-    }
-
-    nav a {
-      color: #58a6ff;
-      margin: 0 1rem;
-      text-decoration: none;
-      font-weight: bold;
-      transition: color 0.3s ease;
-    }
-
-    nav a:hover {
-      color: #f0f6fc;
-    }
-
-    main {
-      padding: 2rem;
-      max-width: 1000px;
-      margin: auto;
-    }
-
-    section {
-      background: rgba(255, 255, 255, 0.04);
-      backdrop-filter: blur(8px);
-      padding: 1.5rem;
-      margin-bottom: 2rem;
-      border-radius: 12px;
-      border: 1px solid #30363d;
-      box-shadow: 0 0 10px rgba(88, 166, 255, 0.1);
-    }
-
-    section h2 {
-      color: #c9d1d9;
-      border-left: 4px solid #58a6ff;
-      padding-left: 0.5rem;
-      font-size: 1.5rem;
-      margin-bottom: 1rem;
-    }
-
-    ul {
-      list-style-type: square;
-      padding-left: 1.5rem;
-    }
-
-    li {
-      margin-bottom: 0.75rem;
-      line-height: 1.6;
-    }
-
-    a.download-link {
-      display: inline-block;
-      background-color: #58a6ff;
-      color: #0d1117;
-      padding: 0.75rem 1.25rem;
-      border-radius: 8px;
-      font-weight: bold;
-      text-decoration: none;
-      transition: background-color 0.3s ease;
-    }
-
-    a.download-link:hover {
-      background-color: #79c0ff;
-    }
-
-    footer {
-      text-align: center;
-      padding: 2rem;
-      color: #8b949e;
-      border-top: 1px solid #222;
+    .print-badge {
+      font-size: 0.75rem;
+      color: #79c0ff;
+      font-style: italic;
     }
   </style>
 </head>
-<body>
+<body class="cyber-bg">
   <header>
-    <h1>Résumé</h1>
-    <nav>
+    <h1 class="glow-title">Résumé</h1>
+    <nav class="nav-bar" aria-label="Resume Navigation">
       <a href="index.html">Home</a>
       <a href="projects.html">Projects</a>
       <a href="contact.html">Contact</a>
     </nav>
   </header>
 
-  <main>
-    <section>
-      <h2>Download My Résumé</h2>
-      <p><a class="download-link" href="Isai%20Valdez%20resume%202025.docx" download>Download Résumé (Word)</a></p>
+  <main role="main">
+    <section class="frost-card fade-in fade-delay-1">
+      <h2 class="glow-text">Download My Résumé <span class="print-badge">[CTRL + ALT + R]</span></h2>
+      <p><a class="download-link" href="Isai%20Valdez%20resume%202025.docx" download>Click to Download (Word)</a></p>
     </section>
 
-    <section>
+    <section class="frost-card fade-in fade-delay-2">
       <h2>Professional Summary</h2>
       <p>Strategic and impact-driven professional with 5+ years in operations management, cybersecurity, and threat intelligence. Director-level leadership in both corporate and nonprofit sectors with a strong track record in community safety, security systems, and anti-trafficking efforts.</p>
     </section>
 
-    <section>
+    <section class="frost-card fade-in fade-delay-3">
       <h2>Experience Highlights</h2>
       <ul>
         <li><strong>Director of Operations</strong> – Shadowbreak Project: Led national anti-trafficking initiatives, OSINT database development, and volunteer operations reaching 35,000+ students.</li>
@@ -127,7 +67,7 @@
       </ul>
     </section>
 
-    <section>
+    <section class="frost-card fade-in fade-delay-4">
       <h2>Certifications & Education</h2>
       <ul>
         <li>B.S. in Network Engineering & Security – WGU (Expected Dec 2025)</li>
@@ -139,8 +79,8 @@
     </section>
   </main>
 
-  <footer>
-    <p>© 2025 Isai Valdez</p>
+  <footer role="contentinfo">
+    <p><span class="terminal-text">© 2025</span> Isai Valdez | Mission Certified</p>
   </footer>
 </body>
 </html>
