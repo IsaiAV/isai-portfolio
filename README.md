@@ -9,7 +9,7 @@ Welcome to the cyber interface of **Isai Valdez** — a tactical, OSINT-driven p
 ---
 
 ## Live Link
-https://isaivaldez.github.io/isai-portfolio
+[https://isaivaldez.github.io/isai-portfolio](https://isaiav.github.io/isai-portfolio/)
 
 ---
 
