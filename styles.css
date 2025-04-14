@@ -185,6 +185,7 @@ code {
   position: fixed;
   bottom: 0;
   width: 100%;
+  display: none;
   background: rgba(0, 0, 0, 0.95);
   color: #00ff9f;
   font-family: monospace;
@@ -205,6 +206,7 @@ code {
   font-family: monospace;
   font-size: 0.9rem;
 }
+
 <script>
   let consoleOpen = false;
 
@@ -223,19 +225,20 @@ code {
 
     if (e.key === 'Enter' && consoleOpen) {
       const cmd = document.getElementById('terminalInput').value.trim().toLowerCase();
+      const inputBox = document.getElementById('terminalInput');
+
       if (cmd === 'help') {
-        alert('Available commands:\n- help\n- exit\n- uplink');
-      }
-      if (cmd === 'exit') {
+        alert('📖 Available Commands:\n- help\n- exit\n- uplink');
+      } else if (cmd === 'exit') {
         document.getElementById('commandBar').style.display = 'none';
-        document.getElementById('terminalInput').value = '';
         consoleOpen = false;
+      } else if (cmd === 'uplink') {
+        alert('🛰️ Uplink confirmed. Surveillance grid initialized.');
+      } else {
+        alert(`⚠️ Unknown command: '${cmd}'`);
       }
-      if (cmd === 'uplink') {
-        alert('🛰️ Uplink confirmed. Surveillance grid initiated.');
-      }
-      // add more command handlers here
-      document.getElementById('terminalInput').value = '';
+
+      inputBox.value = '';
     }
   });
 </script>
