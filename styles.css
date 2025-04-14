@@ -181,3 +181,61 @@ code {
   visibility: hidden;
   transition: opacity 0.6s ease;
 }
+#commandBar {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.95);
+  color: #00ff9f;
+  font-family: monospace;
+  font-size: 0.9rem;
+  padding: 0.5rem 1rem;
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+#commandBar input {
+  background: transparent;
+  border: none;
+  color: #00ff9f;
+  outline: none;
+  width: 100%;
+  font-family: monospace;
+  font-size: 0.9rem;
+}
+<script>
+  let consoleOpen = false;
+
+  document.addEventListener('keydown', e => {
+    if ((e.key === '/' || e.key === ':') && !consoleOpen) {
+      document.getElementById('commandBar').style.display = 'flex';
+      document.getElementById('terminalInput').focus();
+      consoleOpen = true;
+    }
+
+    if (e.key === 'Escape' && consoleOpen) {
+      document.getElementById('commandBar').style.display = 'none';
+      document.getElementById('terminalInput').value = '';
+      consoleOpen = false;
+    }
+
+    if (e.key === 'Enter' && consoleOpen) {
+      const cmd = document.getElementById('terminalInput').value.trim().toLowerCase();
+      if (cmd === 'help') {
+        alert('Available commands:\n- help\n- exit\n- uplink');
+      }
+      if (cmd === 'exit') {
+        document.getElementById('commandBar').style.display = 'none';
+        document.getElementById('terminalInput').value = '';
+        consoleOpen = false;
+      }
+      if (cmd === 'uplink') {
+        alert('🛰️ Uplink confirmed. Surveillance grid initiated.');
+      }
+      // add more command handlers here
+      document.getElementById('terminalInput').value = '';
+    }
+  });
+</script>
