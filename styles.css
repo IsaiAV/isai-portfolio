@@ -176,6 +176,8 @@ code {
 }
 
 .hidden-loader {
-  opacity: 0 !important;
+  opacity: 0;
   pointer-events: none;
+  visibility: hidden;
+  transition: opacity 0.6s ease;
 }
