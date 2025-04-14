@@ -6,6 +6,36 @@
   <title>Contact | Isai Valdez</title>
   <link rel="stylesheet" href="styles.css">
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <style>
+    nav a {
+      position: relative;
+    }
+    nav a::after {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 2px;
+      display: block;
+      margin-top: 5px;
+      right: 0;
+      background: #61dafb;
+      transition: width 0.3s ease;
+      -webkit-transition: width 0.3s ease;
+    }
+    nav a:hover::after {
+      width: 100%;
+      left: 0;
+      background: #fff;
+    }
+
+    ul li a {
+      transition: transform 0.2s ease, color 0.3s ease;
+    }
+    ul li a:hover {
+      transform: translateX(5px);
+      color: #007acc;
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -43,4 +73,3 @@
   </footer>
 </body>
 </html>
-
