@@ -8,22 +8,39 @@
   <meta name="description" content="Explore cybersecurity and OSINT projects by Isai Valdez including tactical lab builds, detection tools, and threat intel systems." />
   <meta property="og:title" content="Isai Valdez | Cyber Projects" />
   <meta property="og:description" content="Explore Isai's hands-on cybersecurity lab, OSINT tools, and tactical systems." />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#0d1117" />
+  <meta name="keywords" content="cybersecurity, osint, threat intelligence, network lab, isai valdez portfolio" />
+  <link rel="canonical" href="https://isaivaldez.github.io/isai-portfolio/projects.html" />
+  <link rel="icon" href="/assets/images/favicon.png" type="image/png" />
+  <meta name="author" content="Isai Valdez" />
+  <meta name="generator" content="Custom HTML & CSS only, no frameworks" />
+  <script>
+    // Hidden DevTools Easter Egg
+    document.addEventListener('keydown', (e) => {
+      if (e.ctrlKey && e.altKey && e.key === 'P') {
+        alert("🧠 DevMode Activated: Shadowbreak Console Ready");
+        document.body.style.filter = "invert(1) hue-rotate(180deg)";
+      }
+    });
+  </script>
 </head>
 <body class="cyber-bg">
   <header>
-    <h1 class="glow-title">Project Terminal</h1>
-    <nav class="nav-bar">
+    <h1 class="glow-title" aria-label="Project Terminal">Project Terminal</h1>
+    <nav class="nav-bar" role="navigation" aria-label="Main navigation">
       <a href="index.html">Home</a>
       <a href="resume.html">Résumé</a>
       <a href="contact.html">Contact</a>
     </nav>
   </header>
 
-  <main>
+  <main role="main">
     <section class="fade-in fade-delay-1">
       <h2 class="glow-text">Project Portfolio</h2>
 
-      <div class="project frost-card">
+      <div class="project frost-card" tabindex="0" aria-label="Network Security Lab project">
         <h3><a href="https://github.com/IsaiAV/network-security-lab" target="_blank">🛡️ Network Security Lab</a></h3>
         <p>Hands-on cybersecurity environment with real configs for firewalls, VPNs, and IDS. Includes logs, automation, and detailed testing examples.</p>
         <details>
@@ -38,19 +55,19 @@
         </details>
       </div>
 
-      <div class="project frost-card">
+      <div class="project frost-card" tabindex="0" aria-label="Shadowbreak OSINT Core">
         <h3><a href="https://github.com/IsaiAV/shadowbreak-osint-core" target="_blank">🔍 Shadowbreak OSINT Core</a></h3>
         <p>Symbolic OSINT toolkit with entropy scanning and grooming detection, designed to analyze narrative trauma patterns using AI + NLP. Built on the λ∇Ψ equation for symbolic intelligence.</p>
       </div>
 
-      <div class="project frost-card">
+      <div class="project frost-card" tabindex="0" aria-label="Shadowbreak Live Website">
         <h3><a href="https://shadowbreak-backend.onrender.com" target="_blank">🌐 Shadowbreak Project Website (Live)</a></h3>
         <p>Public portal for my nonprofit anti-trafficking system. Includes education tools, mission resources, and tactical awareness campaigns powered by AI-driven OSINT.</p>
       </div>
     </section>
   </main>
 
-  <footer>
+  <footer role="contentinfo">
     <p><span class="terminal-text">© 2025</span> Isai Valdez | All systems active</p>
   </footer>
 </body>
