@@ -35,6 +35,33 @@
       transform: translateX(5px);
       color: #007acc;
     }
+
+    @media (max-width: 600px) {
+      body {
+        font-size: 16px;
+        padding: 1rem;
+      }
+
+      nav {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        align-items: center;
+      }
+
+      nav a {
+        font-size: 1rem;
+        margin: 0.3rem 0;
+      }
+
+      main section {
+        padding: 0.5rem;
+      }
+
+      h1, h2, h3 {
+        text-align: center;
+      }
+    }
   </style>
 </head>
 <body>
@@ -73,3 +100,4 @@
   </footer>
 </body>
 </html>
+
