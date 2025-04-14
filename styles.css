@@ -181,23 +181,38 @@ code {
   visibility: hidden;
   transition: opacity 0.6s ease;
 }
-#commandBar {
+#commandConsole {
   position: fixed;
   bottom: 0;
   width: 100%;
-  display: none;
+  max-height: 50vh;
   background: rgba(0, 0, 0, 0.95);
   color: #00ff9f;
   font-family: monospace;
   font-size: 0.9rem;
-  padding: 0.5rem 1rem;
-  z-index: 10000;
+  padding: 1rem;
+  z-index: 9999;
+  display: none;
+  flex-direction: column;
+  overflow-y: auto;
+  border-top: 1px solid #58a6ff;
+}
+
+.console-output {
+  flex-grow: 1;
+  overflow-y: auto;
+  white-space: pre-wrap;
+  margin-bottom: 0.5rem;
+  max-height: 30vh;
+}
+
+.console-input {
   display: flex;
   align-items: center;
   gap: 0.5rem;
 }
 
-#commandBar input {
+.console-input input {
   background: transparent;
   border: none;
   color: #00ff9f;
@@ -207,38 +222,92 @@ code {
   font-size: 0.9rem;
 }
 
+
 <script>
+  const consoleEl = document.getElementById('commandConsole');
+  const inputEl = document.getElementById('terminalInput');
+  const outputEl = document.getElementById('consoleOutput');
+  let history = [];
+  let historyIndex = -1;
   let consoleOpen = false;
 
-  document.addEventListener('keydown', e => {
-    if ((e.key === '/' || e.key === ':') && !consoleOpen) {
-      document.getElementById('commandBar').style.display = 'flex';
-      document.getElementById('terminalInput').focus();
-      consoleOpen = true;
-    }
+  const typeResponse = (text, delay = 30) => {
+    let i = 0;
+    const line = document.createElement('div');
+    outputEl.appendChild(line);
+    const interval = setInterval(() => {
+      if (i < text.length) {
+        line.textContent += text[i++];
+        outputEl.scrollTop = outputEl.scrollHeight;
+      } else {
+        clearInterval(interval);
+      }
+    }, delay);
+  };
 
+  const executeCommand = (cmd) => {
+    const lowerCmd = cmd.toLowerCase();
+    if (lowerCmd === 'help') {
+      typeResponse('📖 Available Commands:\n- help\n- exit\n- clear\n- uplink\n- whoami');
+    } else if (lowerCmd === 'uplink') {
+      typeResponse('🛰️ Uplink established. Grid connection confirmed.');
+    } else if (lowerCmd === 'exit') {
+      closeConsole();
+    } else if (lowerCmd === 'clear') {
+      outputEl.innerHTML = '';
+    } else if (lowerCmd === 'whoami') {
+      typeResponse('🔐 Isai Valdez – Cybersecurity Architect • OSINT • Tactical Code');
+    } else {
+      typeResponse(`⚠️ Unknown command: '${cmd}'`);
+    }
+  };
+
+  const openConsole = () => {
+    consoleEl.style.display = 'flex';
+    inputEl.focus();
+    consoleOpen = true;
+  };
+
+  const closeConsole = () => {
+    consoleEl.style.display = 'none';
+    inputEl.value = '';
+    historyIndex = -1;
+    consoleOpen = false;
+  };
+
+  document.addEventListener('keydown', (e) => {
+    if ((e.key === '/' || e.key === ':') && !consoleOpen) {
+      openConsole();
+    }
     if (e.key === 'Escape' && consoleOpen) {
-      document.getElementById('commandBar').style.display = 'none';
-      document.getElementById('terminalInput').value = '';
-      consoleOpen = false;
+      closeConsole();
     }
 
     if (e.key === 'Enter' && consoleOpen) {
-      const cmd = document.getElementById('terminalInput').value.trim().toLowerCase();
-      const inputBox = document.getElementById('terminalInput');
-
-      if (cmd === 'help') {
-        alert('📖 Available Commands:\n- help\n- exit\n- uplink');
-      } else if (cmd === 'exit') {
-        document.getElementById('commandBar').style.display = 'none';
-        consoleOpen = false;
-      } else if (cmd === 'uplink') {
-        alert('🛰️ Uplink confirmed. Surveillance grid initialized.');
-      } else {
-        alert(`⚠️ Unknown command: '${cmd}'`);
+      const cmd = inputEl.value.trim();
+      if (cmd !== '') {
+        outputEl.innerHTML += `\n> ${cmd}`;
+        history.unshift(cmd);
+        executeCommand(cmd);
+        inputEl.value = '';
       }
+    }
 
-      inputBox.value = '';
+    if (consoleOpen && e.key === 'ArrowUp') {
+      if (history.length > 0 && historyIndex < history.length - 1) {
+        historyIndex++;
+        inputEl.value = history[historyIndex];
+      }
+    }
+
+    if (consoleOpen && e.key === 'ArrowDown') {
+      if (historyIndex > 0) {
+        historyIndex--;
+        inputEl.value = history[historyIndex];
+      } else {
+        inputEl.value = '';
+        historyIndex = -1;
+      }
     }
   });
 </script>
