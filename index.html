@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Isai Valdez | Cybersecurity Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Isai Valdez</h1>
+    <p>Cybersecurity • OSINT • Network Security</p>
+    <nav>
+      <a href="projects.html">Projects</a>
+      <a href="resume.html">Résumé</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="intro">
+      <h2>Welcome</h2>
+      <p>I build tactical cybersecurity tools, intelligence labs, and hands-on environments to detect, defend, and demonstrate real-world threat mitigation strategies. This portfolio showcases my most meaningful work across OSINT, network security, and applied defense systems.</p>
+    </section>
+
+    <section id="featured-projects">
+      <h2>Featured Projects</h2>
+
+      <div class="project">
+        <h3><a href="https://github.com/IsaiAV/network-security-lab" target="_blank">🛡️ Network Security Lab</a></h3>
+        <p>A modular home-lab environment with real configurations for firewalls, VPNs, and IDS/IPS tools. Includes automation scripts, logs, diagrams, and active threat detection workflows.</p>
+        <details>
+          <summary>How I built and tested this lab (click to expand)</summary>
+          <ul>
+            <li><strong>Firewalls:</strong> Used <code>iptables</code> and simulated traffic with <code>nmap</code> and <code>curl</code> to test allow/deny rules.</li>
+            <li><strong>IDS:</strong> Created custom Suricata rules and triggered alerts using fake user agents and DNS queries.</li>
+            <li><strong>Brute Force Protection:</strong> Simulated SSH brute force attacks and verified Fail2Ban responses.</li>
+            <li><strong>VPN:</strong> Deployed OpenVPN and WireGuard, tested encrypted traffic flow and routing.</li>
+            <li><strong>Logs:</strong> Captured real logs from all tools, included in the repo under <code>network_logs/</code>.</li>
+          </ul>
+        </details>
+      </div>
+
+      <div class="project">
+        <h3><a href="https://github.com/IsaiAV/shadowbreak-osint-core" target="_blank">🔍 Shadowbreak OSINT Core</a></h3>
+        <p>Symbolic OSINT toolkit built with Python and NLP. Features entropy analysis, grooming pattern detection, and trauma-aware narrative scanning using the Shadow Constant (λ∇Ψ).</p>
+      </div>
+
+      <div class="project">
+        <h3><a href="https://github.com/IsaiAV/shadowbreak.org" target="_blank">🌐 Shadowbreak Project Website</a></h3>
+        <p>Web presence and resource hub for my anti-trafficking nonprofit. Includes mission, tools, outreach programs, and system briefings.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Isai Valdez. Built with passion and persistence.</p>
+  </footer>
+</body>
+</html>
