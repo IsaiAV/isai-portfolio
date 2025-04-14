@@ -102,10 +102,15 @@
 
 <body class="cyber-bg">
   <div id="preloader">[ loading encrypted résumé . . . ]</div>
- <div id="commandBar">
-  <label for="terminalInput">: shadow_console@valdez ></label>
-  <input id="terminalInput" type="text" autocomplete="off" autofocus placeholder="type 'help' or 'exit'..." />
+<!-- Shadow Console -->
+<div id="commandConsole">
+  <div class="console-output" id="consoleOutput"></div>
+  <div class="console-input">
+    <label for="terminalInput">: shadow_console@valdez ></label>
+    <input id="terminalInput" type="text" autocomplete="off" placeholder="type a command..." />
+  </div>
 </div>
+
   <div id="noiseOverlay"></div>
   <div id="helpModal">
     <strong>Console Shortcuts</strong><br><br>
