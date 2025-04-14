@@ -16,17 +16,47 @@
   <link rel="icon" href="/assets/images/favicon.png" type="image/png" />
   <meta name="author" content="Isai Valdez" />
   <meta name="generator" content="Custom HTML & CSS only, no frameworks" />
+  <style>
+    #preloader { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #0d1117; display: flex; align-items: center; justify-content: center; z-index: 9999; color: #58a6ff; font-family: monospace; font-size: 1.2rem; }
+    .hidden-loader { display: none; }
+    #commandBar { position: fixed; bottom: 0; width: 100%; background: rgba(0, 0, 0, 0.9); color: #00ff9f; font-family: monospace; font-size: 0.9rem; padding: 0.5rem 1rem; display: none; z-index: 10000; }
+    #noiseOverlay { content: ""; position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; background: url('https://media.giphy.com/media/l0HlPjezGYjVVR2RO/giphy.gif') repeat; opacity: 0.03; z-index: 1; }
+    #helpModal { display: none; position: fixed; top: 20%; left: 50%; transform: translateX(-50%); background: #0f0f0f; color: #58a6ff; border: 1px solid #58a6ff; border-radius: 10px; font-family: monospace; padding: 1.5rem; z-index: 10001; max-width: 90%; }
+  </style>
   <script>
-    // Hidden DevTools Easter Egg
+    window.addEventListener('DOMContentLoaded', () => {
+      setTimeout(() => document.getElementById('preloader').classList.add('hidden-loader'), 2000);
+    });
     document.addEventListener('keydown', (e) => {
       if (e.ctrlKey && e.altKey && e.key === 'P') {
-        alert("🧠 DevMode Activated: Shadowbreak Console Ready");
+        alert("DevMode Activated: Shadowbreak Console Ready");
         document.body.style.filter = "invert(1) hue-rotate(180deg)";
+      }
+      if (e.ctrlKey && e.altKey && e.key === 'C') {
+        alert("🛰️ Tactical Uplink Activated");
+        document.body.style.background = 'radial-gradient(#1f1f1f, #000)';
+      }
+      if (e.key === '/' || e.key === ':') {
+        document.getElementById('commandBar').style.display = 'block';
+      }
+      if (e.key === '?' || e.key.toLowerCase() === 'h') {
+        document.getElementById('helpModal').style.display = 'block';
       }
     });
   </script>
 </head>
-<body class="cyber-bg">
+<body class="cyber-bg matrix-bg">
+  <div id="preloader">[ loading mission data . . . ]</div>
+  <div id="commandBar">: shadow_console@valdez >_</div>
+  <div id="noiseOverlay"></div>
+  <div id="helpModal">
+    <strong>Command Console Help</strong><br><br>
+    • <code>Ctrl + Alt + C</code> → Tactical Mode<br>
+    • <code>/</code> or <code>:</code> → Open Console<br>
+    • <code>H</code> or <code>?</code> → Help Dialog<br>
+    <br><em>System protocols initialized. Terminal stable.</em>
+  </div>
+
   <header>
     <h1 class="glow-title" aria-label="Project Terminal">Project Terminal</h1>
     <nav class="nav-bar" role="navigation" aria-label="Main navigation">
@@ -41,7 +71,7 @@
       <h2 class="glow-text">Project Portfolio</h2>
 
       <div class="project frost-card" tabindex="0" aria-label="Network Security Lab project">
-        <h3><a href="https://github.com/IsaiAV/network-security-lab" target="_blank">🛡️ Network Security Lab</a></h3>
+        <h3><a href="https://github.com/IsaiAV/network-security-lab" target="_blank">Network Security Lab</a></h3>
         <p>Hands-on cybersecurity environment with real configs for firewalls, VPNs, and IDS. Includes logs, automation, and detailed testing examples.</p>
         <details>
           <summary>Testing Breakdown</summary>
@@ -56,12 +86,12 @@
       </div>
 
       <div class="project frost-card" tabindex="0" aria-label="Shadowbreak OSINT Core">
-        <h3><a href="https://github.com/IsaiAV/shadowbreak-osint-core" target="_blank">🔍 Shadowbreak OSINT Core</a></h3>
+        <h3><a href="https://github.com/IsaiAV/shadowbreak-osint-core" target="_blank">Shadowbreak OSINT Core</a></h3>
         <p>Symbolic OSINT toolkit with entropy scanning and grooming detection, designed to analyze narrative trauma patterns using AI + NLP. Built on the λ∇Ψ equation for symbolic intelligence.</p>
       </div>
 
       <div class="project frost-card" tabindex="0" aria-label="Shadowbreak Live Website">
-        <h3><a href="https://shadowbreak-backend.onrender.com" target="_blank">🌐 Shadowbreak Project Website (Live)</a></h3>
+        <h3><a href="https://shadowbreak-backend.onrender.com" target="_blank">Shadowbreak Project Website (Live)</a></h3>
         <p>Public portal for my nonprofit anti-trafficking system. Includes education tools, mission resources, and tactical awareness campaigns powered by AI-driven OSINT.</p>
       </div>
     </section>
