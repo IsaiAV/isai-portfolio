@@ -1,313 +1,142 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Faith | Isai Valdez</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="/assets/images/favicon.png" type="image/png">
 
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
+  <meta name="description" content="Faith journey of Isai Valdez - finding purpose, freedom, and life in Jesus Christ.">
+  <meta property="og:title" content="Isai Valdez | Faith Journey">
+  <meta property="og:description" content="My testimony of redemption, purpose, and calling through Christ.">
+  <meta name="theme-color" content="#0d1117">
 
-@keyframes pulseGrid {
-  0% {
-    background-position: 0 0;
-  }
-  100% {
-    background-position: 100px 100px;
-  }
-}
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 
-body {
-  font-family: 'Inter', sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #0d1117;
-  background-image: linear-gradient(315deg, #0d1117 0%, #1c1c1c 100%),
-    repeating-linear-gradient(45deg, rgba(255,255,255,0.02) 0px, rgba(255,255,255,0.02) 1px, transparent 1px, transparent 20px);
-  background-size: cover;
-  background-repeat: no-repeat;
-  animation: pulseGrid 20s linear infinite;
-  color: #f0f6fc;
-  line-height: 1.6;
-}
-
-.fade-in {
-  opacity: 0;
-  animation: fadeInUp 1s ease forwards;
-}
-
-.fade-delay-1 { animation-delay: 0.2s; }
-.fade-delay-2 { animation-delay: 0.4s; }
-.fade-delay-3 { animation-delay: 0.6s; }
-
-header {
-  background-color: #121212;
-  color: white;
-  padding: 2rem;
-  text-align: center;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-}
-
-header h1 {
-  font-size: 2.5rem;
-  margin-bottom: 0.5rem;
-  color: #58a6ff;
-}
-
-header p {
-  font-size: 1.2rem;
-  color: #8b949e;
-}
-
-nav a {
-  color: #58a6ff;
-  margin: 0 1rem;
-  text-decoration: none;
-  font-weight: bold;
-  transition: color 0.3s ease;
-}
-
-nav a:hover {
-  color: #f0f6fc;
-}
-
-main {
-  padding: 2rem;
-  max-width: 1000px;
-  margin: auto;
-}
-
-section {
-  margin-bottom: 3rem;
-  background: rgba(255, 255, 255, 0.04);
-  backdrop-filter: blur(8px);
-  padding: 1.5rem;
-  border-radius: 12px;
-  border: 1px solid #30363d;
-  box-shadow: 0 0 10px rgba(88, 166, 255, 0.1);
-}
-
-.project {
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(8px);
-  padding: 1.5rem;
-  margin-bottom: 2rem;
-  border: 1px solid #30363d;
-  border-radius: 12px;
-  box-shadow: 0 0 10px rgba(88, 166, 255, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.project:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 0 20px rgba(88, 166, 255, 0.2);
-}
-
-.project h3 {
-  margin-top: 0;
-}
-
-.project a {
-  color: #58a6ff;
-  text-decoration: none;
-}
-
-.project a:hover {
-  text-decoration: underline;
-}
-
-details summary {
-  cursor: pointer;
-  font-weight: 600;
-  margin-top: 1rem;
-  color: #c9d1d9;
-}
-
-details ul {
-  margin-top: 0.5rem;
-  padding-left: 1.2rem;
-}
-
-footer {
-  text-align: center;
-  padding: 1.5rem;
-  background: #0d1117;
-  font-size: 0.9rem;
-  color: #8b949e;
-  border-top: 1px solid #222;
-  box-shadow: 0 -3px 8px rgba(0, 0, 0, 0.05);
-}
-
-@media (max-width: 600px) {
-  header h1 {
-    font-size: 2rem;
-  }
-  nav a {
-    display: block;
-    margin: 0.5rem 0;
-  }
-}
-
-code {
-  background: #161b22;
-  padding: 0.2rem 0.4rem;
-  border-radius: 4px;
-  font-family: monospace;
-  color: #79c0ff;
-}
-/* Preloader fix */
-#preloader {
-  opacity: 1;
-  transition: opacity 0.6s ease;
-  z-index: 9999;
-  position: fixed;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: #0d1117;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: monospace;
-  font-size: 1.2rem;
-  color: #58a6ff;
-}
-
-.hidden-loader {
-  opacity: 0;
-  pointer-events: none;
-  visibility: hidden;
-  transition: opacity 0.6s ease;
-}
-#commandConsole {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  max-height: 50vh;
-  background: rgba(0, 0, 0, 0.95);
-  color: #00ff9f;
-  font-family: monospace;
-  font-size: 0.9rem;
-  padding: 1rem;
-  z-index: 9999;
-  display: none;
-  flex-direction: column;
-  overflow-y: auto;
-  border-top: 1px solid #58a6ff;
-}
-
-.console-output {
-  flex-grow: 1;
-  overflow-y: auto;
-  white-space: pre-wrap;
-  margin-bottom: 0.5rem;
-  max-height: 30vh;
-}
-
-.console-input {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.console-input input {
-  background: transparent;
-  border: none;
-  color: #00ff9f;
-  outline: none;
-  width: 100%;
-  font-family: monospace;
-  font-size: 0.9rem;
-}
-
-
-<script>
-  const consoleEl = document.getElementById('commandConsole');
-  const inputEl = document.getElementById('terminalInput');
-  const outputEl = document.getElementById('consoleOutput');
-  let history = [];
-  let historyIndex = -1;
-  let consoleOpen = false;
-
-  const typeResponse = (text, delay = 30) => {
-    let i = 0;
-    const line = document.createElement('div');
-    outputEl.appendChild(line);
-    const interval = setInterval(() => {
-      if (i < text.length) {
-        line.textContent += text[i++];
-        outputEl.scrollTop = outputEl.scrollHeight;
-      } else {
-        clearInterval(interval);
-      }
-    }, delay);
-  };
-
-  const executeCommand = (cmd) => {
-    const lowerCmd = cmd.toLowerCase();
-    if (lowerCmd === 'help') {
-      typeResponse('📖 Available Commands:\n- help\n- exit\n- clear\n- uplink\n- whoami');
-    } else if (lowerCmd === 'uplink') {
-      typeResponse('🛰️ Uplink established. Grid connection confirmed.');
-    } else if (lowerCmd === 'exit') {
-      closeConsole();
-    } else if (lowerCmd === 'clear') {
-      outputEl.innerHTML = '';
-    } else if (lowerCmd === 'whoami') {
-      typeResponse('🔐 Isai Valdez – Cybersecurity Architect • OSINT • Tactical Code');
-    } else {
-      typeResponse(`⚠️ Unknown command: '${cmd}'`);
+  <style>
+    body {
+      background: radial-gradient(#0d1117, #000);
+      font-family: 'Poppins', sans-serif;
+      color: #c9d1d9;
+      margin: 0;
+      padding: 0;
     }
-  };
-
-  const openConsole = () => {
-    consoleEl.style.display = 'flex';
-    inputEl.focus();
-    consoleOpen = true;
-  };
-
-  const closeConsole = () => {
-    consoleEl.style.display = 'none';
-    inputEl.value = '';
-    historyIndex = -1;
-    consoleOpen = false;
-  };
-
-  document.addEventListener('keydown', (e) => {
-    if ((e.key === '/' || e.key === ':') && !consoleOpen) {
-      openConsole();
+    header, footer {
+      text-align: center;
+      padding: 2rem 1rem;
     }
-    if (e.key === 'Escape' && consoleOpen) {
-      closeConsole();
+    .nav-bar a {
+      margin: 0 1rem;
+      text-decoration: none;
+      color: #58a6ff;
+      font-weight: bold;
     }
+    .nav-bar a:hover {
+      color: #00ff9f;
+    }
+    main {
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .frost-card {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 20px;
+      padding: 2rem;
+      margin: 1rem;
+      width: 90%;
+      max-width: 900px;
+      box-shadow: 0 0 20px #00ff9f44;
+      text-align: center;
+    }
+    h2 {
+      color: #00ff9f;
+      text-shadow: 0 0 5px #00ff9f;
+    }
+    a {
+      color: #58a6ff;
+      text-decoration: none;
+    }
+    a:hover {
+      color: #00ff9f;
+    }
+    .hero {
+      font-size: 2.5rem;
+      font-family: 'Orbitron', sans-serif;
+      color: #58a6ff;
+      text-shadow: 0 0 10px #58a6ff;
+      margin-top: 2rem;
+    }
+    .sub-hero {
+      font-size: 1.2rem;
+      margin-top: 1rem;
+      color: #00ff9f;
+      text-shadow: 0 0 5px #00ff9f;
+    }
+    .bible-verse {
+      font-style: italic;
+      margin-top: 1rem;
+    }
+  </style>
 
-    if (e.key === 'Enter' && consoleOpen) {
-      const cmd = inputEl.value.trim();
-      if (cmd !== '') {
-        outputEl.innerHTML += `\n> ${cmd}`;
-        history.unshift(cmd);
-        executeCommand(cmd);
-        inputEl.value = '';
-      }
-    }
+</head>
+<body>
+  <header>
+    <h1 class="hero">Faith Over Fear</h1>
+    <p class="sub-hero">My Foundation is Christ</p>
+    <nav class="nav-bar">
+      <a href="index.html">Home</a>
+      <a href="projects.html">Projects</a>
+      <a href="resume.html">Résumé</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
 
-    if (consoleOpen && e.key === 'ArrowUp') {
-      if (history.length > 0 && historyIndex < history.length - 1) {
-        historyIndex++;
-        inputEl.value = history[historyIndex];
-      }
-    }
+  <main>
 
-    if (consoleOpen && e.key === 'ArrowDown') {
-      if (historyIndex > 0) {
-        historyIndex--;
-        inputEl.value = history[historyIndex];
-      } else {
-        inputEl.value = '';
-        historyIndex = -1;
-      }
-    }
-  });
-</script>
+    <section class="frost-card">
+      <h2>My Testimony</h2>
+      <p>Through every battle, every victory, and every failure — I found that the world could never fill what was empty inside. Only Jesus Christ could. Success, titles, and recognition faded. What endured was His love, His truth, and His grace. My life, my work, and my future are built on Him, the solid rock.</p>
+      <p class="bible-verse">"For what shall it profit a man, if he shall gain the whole world, and lose his own soul?" — Mark 8:36</p>
+    </section>
+
+    <section class="frost-card">
+      <h2>Favorite Bible Verses</h2>
+      <ul style="text-align: left;">
+        <li><strong>John 14:6</strong> — "I am the way and the truth and the life. No one comes to the Father except through me."
+        </li>
+        <li><strong>Psalm 127:1</strong> — "Unless the LORD builds the house, the builders labor in vain."
+        </li>
+        <li><strong>Matthew 6:33</strong> — "But seek first the kingdom of God and his righteousness, and all these things will be added to you."
+        </li>
+      </ul>
+    </section>
+
+    <section class="frost-card">
+      <h2>Faith Resources</h2>
+      <ul>
+        <li><a href="https://cornerstonechapel.net/" target="_blank">Cornerstone Chapel</a></li>
+        <li><a href="https://biblegateway.com/" target="_blank">Bible Gateway</a></li>
+        <li><a href="https://blueletterbible.org/" target="_blank">Blue Letter Bible</a></li>
+        <li><a href="https://desiringgod.org/" target="_blank">Desiring God Ministries</a></li>
+      </ul>
+    </section>
+
+    <section class="frost-card">
+      <h2>Want to Start Your Journey?</h2>
+      <p>If you're seeking more — if the world has left you empty — there is a Savior who is calling you by name. His name is Jesus. Open a Bible. Start reading the Gospel of John. Pray, even if you don't know what to say. He is listening.</p>
+      <p><a href="https://cornerstonechapel.net/media" target="_blank">Start Listening to the Word</a></p>
+    </section>
+
+  </main>
+
+  <footer>
+    <p><span class="terminal-text">&copy; 2025</span> Isai Valdez | Built on Christ Alone.</p>
+  </footer>
+</body>
+</html>
