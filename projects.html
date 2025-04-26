@@ -4,14 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Projects | Isai Valdez</title>
-  <link rel="stylesheet" href="styles.css">
-  <link rel="icon" href="/assets/images/favicon.png" type="image/png">
-
   <meta name="description" content="Explore cybersecurity, OSINT projects, and faith-centered initiatives by Isai Valdez.">
   <meta property="og:title" content="Isai Valdez | Cyber & Faith Projects">
   <meta property="og:description" content="Hands-on cybersecurity labs, OSINT tools, robotics, and faith-driven missions.">
   <meta name="theme-color" content="#0d1117">
 
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="/assets/images/favicon.png" type="image/png">
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 
@@ -22,12 +21,15 @@
       color: #c9d1d9;
       margin: 0;
       padding: 0;
+      scroll-behavior: smooth;
       overflow-x: hidden;
     }
+
     header, footer {
       text-align: center;
       padding: 2rem 1rem;
     }
+
     .nav-bar a {
       margin: 0 1rem;
       text-decoration: none;
@@ -38,54 +40,79 @@
     .nav-bar a:hover {
       color: #00ff9f;
     }
+
     main {
+      padding: 2rem 1rem;
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding: 2rem 1rem;
     }
+
     .frost-card {
       background: rgba(255, 255, 255, 0.05);
       backdrop-filter: blur(10px);
-      border: 1px solid rgba(255, 255, 255, 0.2);
+      border: 1px solid rgba(255, 255, 255, 0.15);
       border-radius: 20px;
       padding: 2rem;
       margin: 1rem;
       width: 90%;
-      max-width: 800px;
-      box-shadow: 0 0 20px #00ff9f44;
-      animation: fadeInUp 1s ease;
+      max-width: 900px;
+      box-shadow: 0 0 15px #00ff9f33;
+      animation: fadeInUp 1s ease both;
+      transition: all 0.3s ease;
     }
+    .frost-card:hover {
+      box-shadow: 0 0 25px #00ff9f88;
+      transform: translateY(-5px);
+    }
+
     @keyframes fadeInUp {
       from { opacity: 0; transform: translateY(20px); }
       to { opacity: 1; transform: translateY(0); }
     }
+
     .glow-title {
       font-size: 2.5rem;
       color: #00ff9f;
       text-shadow: 0 0 10px #00ff9f;
       font-family: 'Orbitron', sans-serif;
     }
+
     .glow-text {
       color: #58a6ff;
       text-shadow: 0 0 8px #58a6ff;
     }
+
     a {
       color: #58a6ff;
       text-decoration: none;
-      transition: all 0.3s;
+      transition: all 0.3s ease;
     }
     a:hover {
       color: #00ff9f;
     }
+
     .bible-verse {
       font-style: italic;
       text-align: center;
       margin-top: 1rem;
+      color: #c9d1d9;
+    }
+
+    footer {
+      font-size: 0.9rem;
+      color: #8b949e;
+      border-top: 1px solid #222;
+      box-shadow: 0 -3px 8px rgba(0, 0, 0, 0.05);
+    }
+
+    @media (max-width: 600px) {
+      header h1 { font-size: 2rem; }
+      .nav-bar a { display: block; margin: 0.5rem 0; }
     }
   </style>
-
 </head>
+
 <body>
   <header>
     <h1 class="glow-title">Project Terminal</h1>
@@ -99,7 +126,7 @@
   <main>
     <section class="frost-card">
       <h2 class="glow-text">Finding True Purpose</h2>
-      <p>Through all my cybersecurity projects and achievements, I realized that none of it filled the deep need inside me — only Jesus Christ could. Now, every line of code and every project I build is anchored in Him, my true foundation. (<strong>Psalm 127:1</strong>)</p>
+      <p>Through all my cybersecurity achievements, I realized the true foundation is Jesus Christ. Everything I build now stands on His eternal truth. (<strong>Psalm 127:1</strong>)</p>
       <p class="bible-verse">"Unless the LORD builds the house, the builders labor in vain." — Psalm 127:1</p>
       <p><a href="https://cornerstonechapel.net/" target="_blank">Visit My Church: Cornerstone Chapel</a></p>
     </section>
@@ -107,40 +134,40 @@
     <section class="frost-card">
       <h2 class="glow-text">Project Portfolio</h2>
 
-      <div class="project frost-card">
+      <div class="frost-card">
         <h3><a href="https://github.com/IsaiAV/network-security-lab" target="_blank">Network Security Lab</a></h3>
-        <p>Hands-on modular cybersecurity environment with firewalls, VPNs, IDS/IPS, and active threat simulations.</p>
+        <p>Home-lab with firewalls, VPNs, IDS/IPS, automation, and live threat detection simulations.</p>
       </div>
 
-      <div class="project frost-card">
+      <div class="frost-card">
         <h3><a href="https://github.com/IsaiAV/shadowbreak-osint-core" target="_blank">Shadowbreak OSINT Core</a></h3>
-        <p>AI-powered OSINT toolkit detecting narrative drift, grooming, and trafficking patterns with symbolic intelligence models.</p>
+        <p>Symbolic AI OSINT toolkit to map behavioral anomalies and narrative drift patterns.</p>
       </div>
 
-      <div class="project frost-card">
+      <div class="frost-card">
         <h3><a href="https://shadowbreak-backend.onrender.com" target="_blank">Shadowbreak Project Website</a></h3>
-        <p>Public anti-trafficking portal featuring tools, campaigns, and research briefs powered by AI-driven OSINT analysis.</p>
+        <p>Anti-trafficking initiative hub powered by AI OSINT, awareness campaigns, and research briefings.</p>
       </div>
 
-      <div class="project frost-card">
-        <h3>Dream Crashers – Surreal Platformer for Meta XR</h3>
-        <p>A dreamlike mobile-first game created with Unreal Engine 5 for the Meta Developer OS ecosystem. Early development.</p>
+      <div class="frost-card">
+        <h3>Dream Crashers – Meta XR Platformer</h3>
+        <p>A surreal physics-driven mobile XR game exploring dream logic and chaotic randomness (Unreal Engine 5).</p>
       </div>
 
-      <div class="project frost-card">
-        <h3><a href="https://hackaday.io/isai" target="_blank">Modular Robotics System – Powered by ROS2</a></h3>
-        <p>Building an experimental modular robot with environmental awareness, navigation, and symbolic AI integration.</p>
+      <div class="frost-card">
+        <h3><a href="https://hackaday.io/isai" target="_blank">Modular Robotics System – ROS2</a></h3>
+        <p>Early-stage modular robotics integrating environmental sensors, ROS2 navigation, and symbolic AI design.</p>
       </div>
 
-      <div class="project frost-card">
-        <h3>Shadow Systems Theory (SST) — Foundational Research</h3>
-        <p>A theoretical framework modeling trauma as a symbolic distortion field using narrative physics and entropy mapping.</p>
+      <div class="frost-card">
+        <h3>Shadow Systems Theory (SST)</h3>
+        <p>Research framework modeling trauma as symbolic field distortion through narrative and entropy mapping.</p>
         <p><a href="https://linktr.ee/IsaiValdez" target="_blank">Research Hub</a></p>
       </div>
 
-      <div class="project frost-card">
+      <div class="frost-card">
         <h3>The Weight No One Sees – Novel in Progress</h3>
-        <p>A deeply spiritual novel exploring unseen trauma, redemption, and faith through the eyes of a struggling father.</p>
+        <p>A raw, spiritually-driven novel chronicling unseen battles, hope, and faith through the life of a flawed father.</p>
       </div>
     </section>
 
