@@ -1,4 +1,4 @@
-# 🚀 isai-portfolio
+# isai's portfolio
 
 Welcome to the cyber interface of **Isai Valdez** — a tactical, OSINT-driven personal portfolio, **handcrafted** with **pure HTML and CSS**.  
 No frameworks. No libraries. No limits. Just **vision, mastery, and the Grace of God**.
@@ -9,14 +9,13 @@ No frameworks. No libraries. No limits. Just **vision, mastery, and the Grace of
 
 ---
 
-## 🌐 Live Project
-🔗 [Visit Portfolio](https://isaivaldez.github.io/isai-portfolio/)
+## Live Project
+🔗 [Visit Portfolio]([https://isaivaldez.github.io/isai-portfolio/](https://isaiav.github.io/isai-portfolio/faith.html))
 
 ---
 
-## ✨ Features
+## Features
 
-- **Cyber Command Console UI** — keyboard shortcuts, hidden commands, tactical mode
 - **Glassmorphic Design** — dark mode, frosted-glass UI, neon text glow
 - **Matrix Grid & Dynamic Backgrounds** — animated overlays and pulse grid system
 - **Faith Integration** — Gospel-centered `faith.html` page about finding true purpose in Jesus Christ
@@ -28,7 +27,7 @@ No frameworks. No libraries. No limits. Just **vision, mastery, and the Grace of
 
 ---
 
-## 📄 Pages Overview
+## Pages Overview
 
 | Page           | Description                                               |
 |----------------|-----------------------------------------------------------|
@@ -40,7 +39,7 @@ No frameworks. No libraries. No limits. Just **vision, mastery, and the Grace of
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - 100% **HTML5**
 - 100% **CSS3** (advanced animations, glass effects, neon, parallax)
@@ -50,7 +49,7 @@ No frameworks. No libraries. No limits. Just **vision, mastery, and the Grace of
 
 ---
 
-## 🙏 About This Portfolio
+## About This Portfolio
 
 This isn't just a website — it's a testimony.
 
@@ -64,13 +63,8 @@ This portfolio exists to share my technical skills, my faith, and my journey —
 
 ---
 
-## 🎯 Console Easter Egg
-
-🛡️ Open DevTools Console and type:
-
 ```javascript
-initShadowOS()
-Unlock a hidden tactical uplink.
+
 
 Faith Resources
 Cornerstone Chapel
