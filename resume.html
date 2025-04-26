@@ -1,262 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Résumé | Isai Valdez</title>
-  <link rel="stylesheet" href="styles.css" />
-  <meta name="description" content="Résumé of Isai Valdez - Cybersecurity, OSINT, Network Defense Expert" />
-  <meta property="og:title" content="Isai Valdez Résumé" />
-  <meta property="og:description" content="Explore the professional experience and certifications of cybersecurity leader Isai Valdez." />
-  <meta name="robots" content="index, follow" />
-  <meta name="author" content="Isai Valdez" />
-  <meta name="theme-color" content="#0d1117" />
-  <link rel="icon" href="/assets/images/favicon.png" type="image/png" />
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="/assets/images/favicon.png" type="image/png">
+
+  <meta name="description" content="Résumé of Isai Valdez - Cybersecurity Leader, OSINT Expert, Faith-driven Technologist.">
+  <meta property="og:title" content="Isai Valdez Résumé">
+  <meta property="og:description" content="Explore the professional journey and certifications of cybersecurity leader Isai Valdez.">
+  <meta name="theme-color" content="#0d1117">
+
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 
   <style>
-    body.resume-print-mode {
-      background: #ffffff;
-      color: #111111;
-      font-family: Georgia, serif;
+    body {
+      background: radial-gradient(#0d1117, #000);
+      font-family: 'Poppins', sans-serif;
+      color: #c9d1d9;
+      margin: 0;
+      padding: 0;
     }
-    body.resume-print-mode a.download-link {
-      background-color: #111;
-      color: #fff;
+    header, footer {
+      text-align: center;
+      padding: 2rem 1rem;
     }
-    .print-badge {
-      font-size: 0.75rem;
-      color: #79c0ff;
-      font-style: italic;
-    }
-    #preloader {
-      position: fixed;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background: #0d1117;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      z-index: 9999;
+    .nav-bar a {
+      margin: 0 1rem;
+      text-decoration: none;
       color: #58a6ff;
-      font-family: monospace;
-      font-size: 1.2rem;
+      font-weight: bold;
     }
-    .hidden-loader { display: none; }
-    #commandBar {
-      position: fixed;
-      bottom: 0;
-      width: 100%;
-      background: rgba(0, 0, 0, 0.9);
+    .nav-bar a:hover {
       color: #00ff9f;
-      font-family: monospace;
-      font-size: 0.9rem;
-      padding: 0.5rem 1rem;
-      display: none;
-      z-index: 10000;
     }
-    #noiseOverlay {
-      content: "";
-      position: fixed;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      pointer-events: none;
-      background: url('https://www.transparenttextures.com/patterns/asfalt-dark.png') repeat;
-      opacity: 0.03;
-      z-index: 1;
+    main {
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
-    #helpModal {
-      display: none;
-      position: fixed;
-      top: 20%;
-      left: 50%;
-      transform: translateX(-50%);
-      background: #0f0f0f;
+    .frost-card {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 20px;
+      padding: 2rem;
+      margin: 1rem;
+      width: 90%;
+      max-width: 900px;
+      box-shadow: 0 0 20px #00ff9f44;
+    }
+    h2 {
+      color: #00ff9f;
+      text-shadow: 0 0 5px #00ff9f;
+    }
+    a {
       color: #58a6ff;
-      border: 1px solid #58a6ff;
-      border-radius: 10px;
-      font-family: monospace;
-      padding: 1.5rem;
-      z-index: 10001;
-      max-width: 90%;
+      text-decoration: none;
+    }
+    a:hover {
+      color: #00ff9f;
     }
   </style>
 
-  <script>
-    window.addEventListener('DOMContentLoaded', () => {
-      setTimeout(() => document.getElementById('preloader').classList.add('hidden-loader'), 2000);
-    });
-    document.addEventListener('keydown', e => {
-      if (e.ctrlKey && e.altKey && e.key === 'R') {
-        document.body.classList.toggle('resume-print-mode');
-        alert('Dark Print Mode Activated');
-      }
-      if (e.key === '/' || e.key === ':') {
-        document.getElementById('commandBar').style.display = 'block';
-      }
-      if (e.key === '?' || e.key.toLowerCase() === 'h') {
-        document.getElementById('helpModal').style.display = 'block';
-      }
-    });
-  </script>
 </head>
-
-<body class="cyber-bg">
-  <div id="preloader">[ loading encrypted résumé . . . ]</div>
-
-  
-<!-- Shadow Console -->
-<div id="commandConsole">
-  <div class="console-output" id="consoleOutput"></div>
-  <div class="console-input">
-    <label for="terminalInput">: shadow_console@valdez ></label>
-    <input id="terminalInput" type="text" autocomplete="off" placeholder="type a command..." />
-  <script>
-  const consoleEl = document.getElementById('commandConsole');
-  const inputEl = document.getElementById('terminalInput');
-  const outputEl = document.getElementById('consoleOutput');
-  let history = [];
-  let historyIndex = -1;
-  let consoleOpen = false;
-
-  const typeResponse = (text, delay = 30) => {
-    let i = 0;
-    const line = document.createElement('div');
-    outputEl.appendChild(line);
-    const interval = setInterval(() => {
-      if (i < text.length) {
-        line.textContent += text[i++];
-        outputEl.scrollTop = outputEl.scrollHeight;
-      } else {
-        clearInterval(interval);
-      }
-    }, delay);
-  };
-
-  const executeCommand = (cmd) => {
-    const lowerCmd = cmd.toLowerCase();
-    if (lowerCmd === 'help') {
-      typeResponse('📖 Available Commands:\n- help\n- exit\n- clear\n- uplink\n- whoami');
-    } else if (lowerCmd === 'uplink') {
-      typeResponse('🛰️ Uplink established. Grid connection confirmed.');
-    } else if (lowerCmd === 'exit') {
-      closeConsole();
-    } else if (lowerCmd === 'clear') {
-      outputEl.innerHTML = '';
-    } else if (lowerCmd === 'whoami') {
-      typeResponse('🔐 Isai Valdez – Cybersecurity Architect • OSINT • Tactical Code');
-    } else {
-      typeResponse(`⚠️ Unknown command: '${cmd}'`);
-    }
-  };
-
-  const openConsole = () => {
-    consoleEl.style.display = 'flex';
-    inputEl.focus();
-    consoleOpen = true;
-  };
-
-  const closeConsole = () => {
-    consoleEl.style.display = 'none';
-    inputEl.value = '';
-    historyIndex = -1;
-    consoleOpen = false;
-  };
-
-  document.addEventListener('keydown', (e) => {
-    if ((e.key === '/' || e.key === ':') && !consoleOpen) {
-      openConsole();
-    }
-    if (e.key === 'Escape' && consoleOpen) {
-      closeConsole();
-    }
-
-    if (e.key === 'Enter' && consoleOpen) {
-      const cmd = inputEl.value.trim();
-      if (cmd !== '') {
-        outputEl.innerHTML += `\n> ${cmd}`;
-        history.unshift(cmd);
-        executeCommand(cmd);
-        inputEl.value = '';
-      }
-    }
-
-    if (consoleOpen && e.key === 'ArrowUp') {
-      if (history.length > 0 && historyIndex < history.length - 1) {
-        historyIndex++;
-        inputEl.value = history[historyIndex];
-      }
-    }
-
-    if (consoleOpen && e.key === 'ArrowDown') {
-      if (historyIndex > 0) {
-        historyIndex--;
-        inputEl.value = history[historyIndex];
-      } else {
-        inputEl.value = '';
-        historyIndex = -1;
-      }
-    }
-  });
-</script>
-
-  
-  </div>
-</div>
-
-  <div id="noiseOverlay"></div>
-  <div id="helpModal">
-    <strong>Console Shortcuts</strong><br><br>
-    • <code>Ctrl + Alt + R</code> → Dark Print Toggle<br>
-    • <code>/</code> or <code>:</code> → Command Mode<br>
-    • <code>H</code> or <code>?</code> → Help Window<br>
-    <br><em>All résumé systems online. Transmission secure.</em>
-  </div>
-
+<body>
   <header>
     <h1 class="glow-title">Résumé</h1>
-    <nav class="nav-bar" aria-label="Resume Navigation">
+    <nav class="nav-bar">
       <a href="index.html">Home</a>
       <a href="projects.html">Projects</a>
       <a href="contact.html">Contact</a>
     </nav>
   </header>
 
-  <main role="main">
-    <section class="frost-card fade-in fade-delay-1">
-      <h2 class="glow-text">Download My Résumé <span class="print-badge">[CTRL + ALT + R]</span></h2>
-      <p><a class="download-link" href="Isai%20Valdez%20resume%202025.docx" download>Click to Download (Word)</a></p>
+  <main>
+
+    <section class="frost-card">
+      <h2>About</h2>
+      <p><strong>"For what does it profit a man to gain the whole world and lose his soul?" — Mark 8:36</strong></p>
+      <p>This verse is my life's compass. Titles, accomplishments, and applause fade — but integrity, purpose, and faith endure. I'm not here to impress. I'm here to serve, to love, and to be a vessel of God's purpose in the world. My journey is stitched with grace, humility, and resilience — not to build my name, but to glorify His.</p>
     </section>
 
-    <section class="frost-card fade-in fade-delay-2">
+    <section class="frost-card">
       <h2>Professional Summary</h2>
-      <p>Strategic and impact-driven professional with 5+ years in operations management, cybersecurity, and threat intelligence. Director-level leadership in both corporate and nonprofit sectors with a strong track record in community safety, security systems, and anti-trafficking efforts.</p>
+      <p>Strategic and impact-driven cybersecurity professional with 5+ years across tactical operations, cybersecurity defense, OSINT research, nonprofit leadership, and faith-centered service initiatives.</p>
     </section>
 
-    <section class="frost-card fade-in fade-delay-3">
-      <h2>Experience Highlights</h2>
+    <section class="frost-card">
+      <h2>Experience</h2>
       <ul>
-        <li><strong>Director of Operations</strong> – Shadowbreak Project</li>
-        <li><strong>Vehicle Operations Specialist III</strong> – Rivian</li>
-        <li><strong>Operations Advisor II</strong> – Tesla</li>
-        <li><strong>Naval Operations Support Specialist</strong> – U.S. Navy</li>
+        <li><strong>Director of Operations</strong> – Shadowbreak Project (2025 - Present)</li>
+        <li><strong>Vehicle Operations Specialist III</strong> – Rivian (2024 - 2025)</li>
+        <li><strong>Operations Advisor II</strong> – Tesla (2022 - 2024)</li>
+        <li><strong>Naval Operations Support Specialist</strong> – U.S. Navy (2020 - 2021)</li>
       </ul>
     </section>
 
-    <section class="frost-card fade-in fade-delay-4">
-      <h2>Certifications & Education</h2>
+    <section class="frost-card">
+      <h2>Education</h2>
       <ul>
-        <li>B.S. in Network Engineering & Security – WGU (Expected Dec 2025)</li>
+        <li><strong>Western Governors University</strong> – B.S. Network Engineering & Security (Expected 2025)</li>
+      </ul>
+    </section>
+
+    <section class="frost-card">
+      <h2>Certifications</h2>
+      <p>View full credentials: <a href="https://www.linkedin.com/in/isaivaldez" target="_blank">LinkedIn Profile</a></p>
+      <ul>
         <li>Google IT Support Certificate</li>
         <li>Six Sigma Black Belt (CSSBB)</li>
-        <li>FEMA IS-Series – Homeland Security & Cybersecurity</li>
-        <li>Google Data Analytics (In Progress)</li>
+        <li>FEMA Homeland Security Certifications</li>
+        <li>ROS2 Robotics Certificate</li>
+        <li>Google Data Analytics</li>
+        <li>Advanced OSINT Methodologies</li>
+        <li>Strategic Foresight & Innovation (Duke, Michigan, Johns Hopkins)</li>
+        <li>Psychological First Aid (Johns Hopkins)</li>
+        <li>Arabic for Beginners (Khalifa University)</li>
+        <li>Wilderness First Aid (University of Colorado)</li>
       </ul>
     </section>
+
+    <section class="frost-card">
+      <h2>Skills & Expertise</h2>
+      <ul>
+        <li>Cyber Threat Intelligence (CTI)</li>
+        <li>OSINT Research & Analysis</li>
+        <li>Network Security & Defense</li>
+        <li>Incident Response & Disaster Preparedness</li>
+        <li>Strategic Operations Leadership</li>
+        <li>Human-Centered Threat Analysis</li>
+        <li>Red Team & Blue Team Operations</li>
+        <li>Technical Communications</li>
+      </ul>
+    </section>
+
+    <section class="frost-card">
+      <h2>Faith Resources</h2>
+      <ul>
+        <li><a href="https://cornerstonechapel.net/" target="_blank">Cornerstone Chapel</a></li>
+        <li><a href="https://biblegateway.com/" target="_blank">Bible Gateway</a></li>
+        <li><a href="https://desiringgod.org/" target="_blank">Desiring God Ministries</a></li>
+      </ul>
+    </section>
+
   </main>
 
-  <footer role="contentinfo">
-    <p><span class="terminal-text">© 2025</span> Isai Valdez | Mission Certified</p>
+  <footer>
+    <p><span class="terminal-text">&copy; 2025</span> Isai Valdez | Built on Christ, Forged by Purpose.</p>
   </footer>
 </body>
 </html>
-
