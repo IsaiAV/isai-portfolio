@@ -27,23 +27,7 @@
       font-family: 'Poppins', sans-serif;
       color: #c9d1d9;
       overflow-x: hidden;
-    }
-
-    #preloader {
-      position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #0d1117;
-      display: flex; align-items: center; justify-content: center;
-      z-index: 9999;
-      font-family: 'Orbitron', monospace;
-      font-size: 1.5rem;
-      color: #58a6ff;
-      animation: typing 2s steps(30) 1 normal both;
-      white-space: nowrap;
-      overflow: hidden;
-    }
-
-    @keyframes typing {
-      from { width: 0 }
-      to { width: 100% }
+      scroll-behavior: smooth;
     }
 
     header, footer {
@@ -79,7 +63,7 @@
       width: 90%;
       max-width: 800px;
       box-shadow: 0 0 20px #00ff9f44;
-      animation: fadeInUp 1s ease;
+      animation: fadeInUp 1s ease both;
     }
 
     @keyframes fadeInUp {
@@ -115,19 +99,37 @@
       font-size: 1.1rem;
       text-align: center;
     }
+
+    .project {
+      background: rgba(255, 255, 255, 0.04);
+      backdrop-filter: blur(10px);
+      padding: 1.5rem;
+      border-radius: 20px;
+      border: 1px solid #2c2f36;
+      margin-bottom: 2rem;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .project:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 25px rgba(88, 166, 255, 0.3);
+    }
+
+    footer {
+      font-size: 0.9rem;
+      color: #8b949e;
+      border-top: 1px solid #222;
+      box-shadow: 0 -3px 8px rgba(0, 0, 0, 0.05);
+    }
+
+    @media (max-width: 600px) {
+      header h1 { font-size: 2rem; }
+      .nav-bar a { display: block; margin: 0.5rem 0; }
+    }
   </style>
-
-  <script>
-    window.addEventListener('DOMContentLoaded', () => {
-      setTimeout(() => document.getElementById('preloader').classList.add('hidden-loader'), 2000);
-    });
-  </script>
-
 </head>
 
 <body>
-  <div id="preloader">[ initializing core... ]</div>
-
   <header>
     <h1 class="glow-title">Isai Valdez</h1>
     <p class="glow-text">Cybersecurity • OSINT • Faith-driven Missions</p>
@@ -149,7 +151,7 @@
       <p class="bible-verse">"For what shall it profit a man, if he shall gain the whole world, and lose his own soul?"<br>— <strong>Mark 8:36</strong></p>
     </section>
 
-    <section id="featured-projects" class="fade-in">
+    <section id="featured-projects">
       <h2 class="glow-title">Featured Projects</h2>
 
       <div class="project frost-card">
@@ -174,4 +176,3 @@
   </footer>
 </body>
 </html>
-
