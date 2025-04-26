@@ -1,4 +1,4 @@
-# 🤝 Contributing to isai-portfolio
+# Contributing to isai-portfolio
 
 First off, thank you for your interest in contributing to this project!  
 This portfolio represents not only my technical skills but also my faith, discipline, and mission.  
@@ -6,7 +6,7 @@ Contributions are welcome — but must honor the spirit of excellence, purpose, 
 
 ---
 
-## 📜 Contribution Guidelines
+## Contribution Guidelines
 
 - **Faith-Respecting Contributions**:  
   Anything added must align with values of respect, honesty, humility, and excellence.
@@ -26,7 +26,7 @@ Contributions are welcome — but must honor the spirit of excellence, purpose, 
 
 ---
 
-## 🛠️ How to Contribute
+## How to Contribute
 
 1. Fork the repository
 2. Create a new branch:  
@@ -44,29 +44,32 @@ git commit -m \"Add feature XYZ\"
    
 6. Submit a Pull Request
    
-Describe clearly what you changed and why.
+- Describe clearly what you changed and why.
 
-Areas You Can Contribute
-UI/UX refinements (still respecting the cyberpunk terminal theme)
+Areas You Can Contribute:
 
-New Bible verses or faith resources for the faith.html page
+- UI/UX refinements (still respecting the cyberpunk terminal theme)
 
-CSS animations (only if lightweight)
+- New Bible verses or faith resources for the faith.html page
 
-Accessibility improvements (keyboard navigation, screen-reader support)
+- CSS animations (only if lightweight)
 
-Optimizing responsiveness for mobile devices
+= Accessibility improvements (keyboard navigation, screen-reader support)
 
-Documentation improvements (better READMEs, tutorials)
+- Optimizing responsiveness for mobile devices
 
-Code of Conduct
-Be respectful
+- Documentation improvements (better READMEs, tutorials)
+  
 
-Stay mission-focused
+Code of Conduct:
 
-Keep the standard high
+- Be respectful
 
-All work must glorify God, reflect love, patience, and excellence.
+- Stay mission-focused
+
+- Keep the standard high
+
+- All work must glorify God, reflect love, patience, and excellence.
 
 "Whatever you do, work heartily, as for the Lord and not for men."
 — Colossians 3:23
