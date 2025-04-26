@@ -4,16 +4,31 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact | Isai Valdez</title>
-  <meta name="description" content="Get in touch with Isai Valdez. Contact via email or connect through professional platforms." />
-  <meta name="author" content="Isai Valdez" />
+  <meta name="description" content="Get in touch with Isai Valdez. Faith, cybersecurity, and open-source collaboration." />
   <meta property="og:title" content="Contact Isai Valdez" />
-  <meta property="og:description" content="Cybersecurity & OSINT collaboration inquiries." />
+  <meta property="og:description" content="Faith-driven cybersecurity & OSINT collaboration." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://isaivaldez.github.io/isai-portfolio/contact.html" />
   <meta name="theme-color" content="#0d1117" />
-  <link rel="stylesheet" href="styles.css">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css">
+
   <style>
+    body {
+      margin: 0;
+      background: radial-gradient(#0d1117, #000000);
+      font-family: 'Poppins', sans-serif;
+      color: #c9d1d9;
+      overflow-x: hidden;
+    }
+
     #preloader {
       position: fixed;
       top: 0; left: 0;
@@ -23,123 +38,140 @@
       align-items: center;
       justify-content: center;
       z-index: 9999;
+      font-family: 'Orbitron', monospace;
+      font-size: 1.5rem;
       color: #58a6ff;
-      font-family: monospace;
-      font-size: 1.2rem;
+      animation: typing 2s steps(22), blink 0.5s step-end infinite alternate;
     }
-    .hidden-loader { display: none; }
-    .project:hover {
-      transform: perspective(1000px) rotateY(3deg);
+
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
     }
-    #commandBar {
-      position: fixed;
-      bottom: 0;
-      width: 100%;
-      background: rgba(0, 0, 0, 0.9);
+    @keyframes blink {
+      50% { border-color: transparent }
+    }
+
+    header, footer {
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+
+    .nav-bar a {
+      margin: 0 1rem;
+      text-decoration: none;
+      color: #58a6ff;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    .nav-bar a:hover {
       color: #00ff9f;
-      font-family: monospace;
-      font-size: 0.9rem;
-      padding: 0.5rem 1rem;
-      display: none;
-      z-index: 10000;
     }
-    #noiseOverlay {
-      content: "";
-      position: fixed;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      pointer-events: none;
-      background: url('https://www.transparenttextures.com/patterns/asfalt-dark.png') repeat;
-      opacity: 0.03;
-      z-index: 1;
+
+    main {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem 1rem;
     }
-    #helpModal {
-      display: none;
-      position: fixed;
-      top: 20%;
-      left: 50%;
-      transform: translateX(-50%);
-      background: #0f0f0f;
+
+    .frost-card {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 20px;
+      padding: 2rem;
+      margin: 1rem;
+      width: 90%;
+      max-width: 600px;
+      box-shadow: 0 0 20px #00ff9f44;
+      animation: fadeInUp 1s ease;
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .glow-title {
+      font-size: 3rem;
+      color: #00ff9f;
+      text-shadow: 0 0 10px #00ff9f, 0 0 20px #00ff9f;
+      font-family: 'Orbitron', sans-serif;
+    }
+
+    .glow-text {
       color: #58a6ff;
-      border: 1px solid #58a6ff;
-      border-radius: 10px;
-      font-family: monospace;
-      padding: 1.5rem;
-      z-index: 10001;
-      max-width: 90%;
+      text-shadow: 0 0 8px #58a6ff;
+    }
+
+    .bible-verse {
+      font-style: italic;
+      color: #c9d1d9;
+      margin-top: 1rem;
+      font-size: 1.1rem;
+    }
+
+    a {
+      color: #58a6ff;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+    a:hover {
+      color: #00ff9f;
     }
   </style>
+
   <script>
     window.addEventListener('DOMContentLoaded', () => {
       setTimeout(() => document.getElementById('preloader').classList.add('hidden-loader'), 2000);
     });
-    document.addEventListener('keydown', e => {
-      if (e.ctrlKey && e.altKey && e.key === 'C') {
-        alert("🛰️ Tactical Uplink Activated");
-        document.body.style.background = 'radial-gradient(#1f1f1f, #000)';
-      }
-      if (e.key === '/' || e.key === ':') {
-        document.getElementById('commandBar').style.display = 'block';
-      }
-      if (e.key === '?' || e.key.toLowerCase() === 'h') {
-        document.getElementById('helpModal').style.display = 'block';
-      }
-    });
   </script>
+
 </head>
-<body class="cyber-bg matrix-bg">
-  <div id="preloader">[ booting uplink . . . ]</div>
- <!-- Shadow Console -->
-<div id="commandConsole">
-  <div class="console-output" id="consoleOutput"></div>
-  <div class="console-input">
-    <label for="terminalInput">: shadow_console@valdez ></label>
-    <input id="terminalInput" type="text" autocomplete="off" placeholder="type a command..." />
-  </div>
-</div>
 
-
-  <div id="noiseOverlay"></div>
-  <div id="helpModal">
-    <strong>Command Console Help</strong><br><br>
-    • <code>Ctrl + Alt + C</code> → Toggle Tactical Theme<br>
-    • <code>/</code> or <code>:</code> → Open Console<br>
-    • <code>H</code> or <code>?</code> → This Help Dialog<br>
-    <br><em>All transmissions encrypted. Stay frosty.</em>
-  </div>
+<body>
+  <div id="preloader">[ booting uplink... ]</div>
 
   <header>
     <h1 class="glow-title">Comms Uplink</h1>
-    <nav class="nav-bar" aria-label="Navigation">
+    <nav class="nav-bar">
       <a href="index.html">Home</a>
       <a href="projects.html">Projects</a>
       <a href="resume.html">Résumé</a>
     </nav>
   </header>
 
-  <main role="main">
-    <section class="frost-card fade-in fade-delay-1">
+  <main>
+    <section class="frost-card">
       <h2 class="glow-text">Let’s Collaborate</h2>
-      <p>I’m open to partnerships, volunteer-led research, and building elite open-source security frameworks. If you want to improve the world — or the net — let's talk.</p>
+      <p>I’m open to partnerships, faith-driven tech initiatives, and building elite open-source security frameworks. Let's make an impact for the Kingdom and the world.</p>
     </section>
 
-    <section class="frost-card fade-in fade-delay-2" aria-labelledby="email">
-      <h3 id="email"><i class="fas fa-envelope"></i> Email Me</h3>
+    <section class="frost-card">
+      <h3 class="glow-text"><i class="fas fa-envelope"></i> Email Me</h3>
       <ul>
-        <li><a href="mailto:isaivaldez44@icloud.com"><i class="fas fa-paper-plane"></i> isaivaldez44@icloud.com</a></li>
-        <li><a href="mailto:yishalvaldez55@gmail.com"><i class="fas fa-paper-plane"></i> yishalvaldez55@gmail.com</a></li>
-        <li><a href="mailto:isaivaldez@shadowbreakproject.org"><i class="fas fa-paper-plane"></i> isaivaldez@shadowbreakproject.org</a></li>
+        <li><a href="mailto:isaivaldez44@icloud.com">isaivaldez44@icloud.com</a></li>
+        <li><a href="mailto:yishalvaldez55@gmail.com">yishalvaldez55@gmail.com</a></li>
+        <li><a href="mailto:isaivaldez@shadowbreakproject.org">isaivaldez@shadowbreakproject.org</a></li>
       </ul>
     </section>
 
-    <section class="frost-card fade-in fade-delay-3" aria-labelledby="social">
-      <h3 id="social"><i class="fas fa-link"></i> Find Me Online</h3>
-      <p><a href="https://linktr.ee/IsaiValdez" target="_blank"><i class="fas fa-globe"></i> All My Links – Linktree</a></p>
+    <section class="frost-card">
+      <h3 class="glow-text"><i class="fas fa-link"></i> Find Me Online</h3>
+      <p><a href="https://linktr.ee/IsaiValdez" target="_blank">All My Links — Linktree</a></p>
+      <p><a href="https://shadowbreak-backend.onrender.com/documentation" target="_blank">Shadowbreak Project — Documentation</a></p>
+    </section>
+
+    <section class="frost-card">
+      <h3 class="glow-text">Favorite Bible Verse</h3>
+      <p class="bible-verse">"For what shall it profit a man, if he shall gain the whole world, and lose his own soul?"<br> — <strong>Mark 8:36</strong></p>
     </section>
   </main>
 
-  <footer role="contentinfo">
-    <p><span class="terminal-text">© 2025</span> Isai Valdez | Secure Connection Established</p>
+  <footer>
+    <p><span class="terminal-text">&copy; 2025</span> Isai Valdez | Secure Connection Established</p>
   </footer>
 </body>
 </html>
+
