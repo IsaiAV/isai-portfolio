@@ -1,0 +1,73 @@
+/* animations.css | Isai Valdez Portfolio - Faith x Cyber Edition */
+
+/* Smooth fade up effect */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Pulse glow animation */
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 10px #00ff9f, 0 0 20px #00ff9f44;
+  }
+  50% {
+    box-shadow: 0 0 20px #58a6ff, 0 0 30px #58a6ff88;
+  }
+}
+
+/* Crossfade text animation */
+@keyframes crossfadeText {
+  0% { opacity: 0; transform: scale(0.95); }
+  50% { opacity: 1; transform: scale(1); }
+  100% { opacity: 0; transform: scale(1.05); }
+}
+
+/* Soft scripture pop-up */
+@keyframes scripturePop {
+  0% {
+    opacity: 0;
+    transform: scale(0.8) rotateX(30deg);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) rotateX(0);
+  }
+}
+
+/* Shine effect for buttons or links */
+@keyframes shine {
+  0% { background-position: -100px; }
+  100% { background-position: 200px; }
+}
+
+/* Applying Animations */
+.fade-in-up {
+  animation: fadeInUp 1s ease forwards;
+}
+
+.pulse-card {
+  animation: pulseGlow 2.5s ease-in-out infinite;
+}
+
+.crossfade-text {
+  animation: crossfadeText 6s infinite;
+}
+
+.scripture-pop {
+  animation: scripturePop 0.8s ease forwards;
+}
+
+.shiny-link {
+  background: linear-gradient(90deg, #58a6ff, #00ff9f, #58a6ff);
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 3s linear infinite;
+}
