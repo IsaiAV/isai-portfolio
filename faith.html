@@ -4,13 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Faith | Isai Valdez</title>
-  <link rel="stylesheet" href="styles.css">
-  <link rel="icon" href="/assets/images/favicon.png" type="image/png">
-
   <meta name="description" content="Faith journey of Isai Valdez - finding purpose, freedom, and life in Jesus Christ.">
   <meta property="og:title" content="Isai Valdez | Faith Journey">
   <meta property="og:description" content="My testimony of redemption, purpose, and calling through Christ.">
   <meta name="theme-color" content="#0d1117">
+
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="/assets/images/favicon.png" type="image/png">
 
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
@@ -22,26 +22,32 @@
       color: #c9d1d9;
       margin: 0;
       padding: 0;
+      scroll-behavior: smooth;
     }
+
     header, footer {
       text-align: center;
       padding: 2rem 1rem;
     }
+
     .nav-bar a {
       margin: 0 1rem;
       text-decoration: none;
       color: #58a6ff;
       font-weight: bold;
+      transition: color 0.3s;
     }
     .nav-bar a:hover {
       color: #00ff9f;
     }
+
     main {
       padding: 2rem;
       display: flex;
       flex-direction: column;
       align-items: center;
     }
+
     .frost-card {
       background: rgba(255, 255, 255, 0.05);
       backdrop-filter: blur(10px);
@@ -53,18 +59,14 @@
       max-width: 900px;
       box-shadow: 0 0 20px #00ff9f44;
       text-align: center;
+      animation: fadeInUp 1s ease both;
     }
-    h2 {
-      color: #00ff9f;
-      text-shadow: 0 0 5px #00ff9f;
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
-    a {
-      color: #58a6ff;
-      text-decoration: none;
-    }
-    a:hover {
-      color: #00ff9f;
-    }
+
     .hero {
       font-size: 2.5rem;
       font-family: 'Orbitron', sans-serif;
@@ -72,19 +74,48 @@
       text-shadow: 0 0 10px #58a6ff;
       margin-top: 2rem;
     }
+
     .sub-hero {
       font-size: 1.2rem;
       margin-top: 1rem;
       color: #00ff9f;
       text-shadow: 0 0 5px #00ff9f;
     }
+
+    h2 {
+      color: #00ff9f;
+      text-shadow: 0 0 5px #00ff9f;
+    }
+
+    a {
+      color: #58a6ff;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+    a:hover {
+      color: #00ff9f;
+    }
+
     .bible-verse {
       font-style: italic;
       margin-top: 1rem;
+      color: #c9d1d9;
+    }
+
+    footer {
+      font-size: 0.9rem;
+      color: #8b949e;
+      border-top: 1px solid #222;
+      box-shadow: 0 -3px 8px rgba(0, 0, 0, 0.05);
+    }
+
+    @media (max-width: 600px) {
+      header h1 { font-size: 2rem; }
+      .nav-bar a { display: block; margin: 0.5rem 0; }
     }
   </style>
-
 </head>
+
 <body>
   <header>
     <h1 class="hero">Faith Over Fear</h1>
@@ -98,7 +129,6 @@
   </header>
 
   <main>
-
     <section class="frost-card">
       <h2>My Testimony</h2>
       <p>Through every battle, every victory, and every failure — I found that the world could never fill what was empty inside. Only Jesus Christ could. Success, titles, and recognition faded. What endured was His love, His truth, and His grace. My life, my work, and my future are built on Him, the solid rock.</p>
@@ -108,12 +138,9 @@
     <section class="frost-card">
       <h2>Favorite Bible Verses</h2>
       <ul style="text-align: left;">
-        <li><strong>John 14:6</strong> — "I am the way and the truth and the life. No one comes to the Father except through me."
-        </li>
-        <li><strong>Psalm 127:1</strong> — "Unless the LORD builds the house, the builders labor in vain."
-        </li>
-        <li><strong>Matthew 6:33</strong> — "But seek first the kingdom of God and his righteousness, and all these things will be added to you."
-        </li>
+        <li><strong>John 14:6</strong> — "I am the way and the truth and the life. No one comes to the Father except through me."</li>
+        <li><strong>Psalm 127:1</strong> — "Unless the LORD builds the house, the builders labor in vain."</li>
+        <li><strong>Matthew 6:33</strong> — "But seek first the kingdom of God and his righteousness, and all these things will be added to you."</li>
       </ul>
     </section>
 
@@ -132,7 +159,6 @@
       <p>If you're seeking more — if the world has left you empty — there is a Savior who is calling you by name. His name is Jesus. Open a Bible. Start reading the Gospel of John. Pray, even if you don't know what to say. He is listening.</p>
       <p><a href="https://cornerstonechapel.net/media" target="_blank">Start Listening to the Word</a></p>
     </section>
-
   </main>
 
   <footer>
