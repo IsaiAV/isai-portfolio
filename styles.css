@@ -1,142 +1,154 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Faith | Isai Valdez</title>
-  <link rel="stylesheet" href="styles.css">
-  <link rel="icon" href="/assets/images/favicon.png" type="image/png">
+/* ======= Global Reset ======= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  <meta name="description" content="Faith journey of Isai Valdez - finding purpose, freedom, and life in Jesus Christ.">
-  <meta property="og:title" content="Isai Valdez | Faith Journey">
-  <meta property="og:description" content="My testimony of redemption, purpose, and calling through Christ.">
-  <meta name="theme-color" content="#0d1117">
+html {
+  scroll-behavior: smooth;
+}
 
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins&display=swap" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+body {
+  background: radial-gradient(circle at center, #0d1117 0%, #000 100%);
+  font-family: 'Poppins', sans-serif;
+  color: #c9d1d9;
+  line-height: 1.7;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
 
-  <style>
-    body {
-      background: radial-gradient(#0d1117, #000);
-      font-family: 'Poppins', sans-serif;
-      color: #c9d1d9;
-      margin: 0;
-      padding: 0;
-    }
-    header, footer {
-      text-align: center;
-      padding: 2rem 1rem;
-    }
-    .nav-bar a {
-      margin: 0 1rem;
-      text-decoration: none;
-      color: #58a6ff;
-      font-weight: bold;
-    }
-    .nav-bar a:hover {
-      color: #00ff9f;
-    }
-    main {
-      padding: 2rem;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-    .frost-card {
-      background: rgba(255, 255, 255, 0.05);
-      backdrop-filter: blur(10px);
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      border-radius: 20px;
-      padding: 2rem;
-      margin: 1rem;
-      width: 90%;
-      max-width: 900px;
-      box-shadow: 0 0 20px #00ff9f44;
-      text-align: center;
-    }
-    h2 {
-      color: #00ff9f;
-      text-shadow: 0 0 5px #00ff9f;
-    }
-    a {
-      color: #58a6ff;
-      text-decoration: none;
-    }
-    a:hover {
-      color: #00ff9f;
-    }
-    .hero {
-      font-size: 2.5rem;
-      font-family: 'Orbitron', sans-serif;
-      color: #58a6ff;
-      text-shadow: 0 0 10px #58a6ff;
-      margin-top: 2rem;
-    }
-    .sub-hero {
-      font-size: 1.2rem;
-      margin-top: 1rem;
-      color: #00ff9f;
-      text-shadow: 0 0 5px #00ff9f;
-    }
-    .bible-verse {
-      font-style: italic;
-      margin-top: 1rem;
-    }
-  </style>
+/* ======= Header & Footer ======= */
+header, footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(8px);
+}
 
-</head>
-<body>
-  <header>
-    <h1 class="hero">Faith Over Fear</h1>
-    <p class="sub-hero">My Foundation is Christ</p>
-    <nav class="nav-bar">
-      <a href="index.html">Home</a>
-      <a href="projects.html">Projects</a>
-      <a href="resume.html">Résumé</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </header>
+header {
+  box-shadow: 0 2px 10px rgba(0,255,159,0.2);
+}
 
-  <main>
+footer {
+  font-size: 0.9rem;
+  color: #8b949e;
+  border-top: 1px solid #222;
+  box-shadow: 0 -3px 8px rgba(0, 0, 0, 0.2);
+}
 
-    <section class="frost-card">
-      <h2>My Testimony</h2>
-      <p>Through every battle, every victory, and every failure — I found that the world could never fill what was empty inside. Only Jesus Christ could. Success, titles, and recognition faded. What endured was His love, His truth, and His grace. My life, my work, and my future are built on Him, the solid rock.</p>
-      <p class="bible-verse">"For what shall it profit a man, if he shall gain the whole world, and lose his own soul?" — Mark 8:36</p>
-    </section>
+.nav-bar a {
+  margin: 0 1rem;
+  text-decoration: none;
+  color: #58a6ff;
+  font-weight: bold;
+  transition: color 0.3s, transform 0.3s;
+}
 
-    <section class="frost-card">
-      <h2>Favorite Bible Verses</h2>
-      <ul style="text-align: left;">
-        <li><strong>John 14:6</strong> — "I am the way and the truth and the life. No one comes to the Father except through me."
-        </li>
-        <li><strong>Psalm 127:1</strong> — "Unless the LORD builds the house, the builders labor in vain."
-        </li>
-        <li><strong>Matthew 6:33</strong> — "But seek first the kingdom of God and his righteousness, and all these things will be added to you."
-        </li>
-      </ul>
-    </section>
+.nav-bar a:hover {
+  color: #00ff9f;
+  transform: scale(1.1);
+}
 
-    <section class="frost-card">
-      <h2>Faith Resources</h2>
-      <ul>
-        <li><a href="https://cornerstonechapel.net/" target="_blank">Cornerstone Chapel</a></li>
-        <li><a href="https://biblegateway.com/" target="_blank">Bible Gateway</a></li>
-        <li><a href="https://blueletterbible.org/" target="_blank">Blue Letter Bible</a></li>
-        <li><a href="https://desiringgod.org/" target="_blank">Desiring God Ministries</a></li>
-      </ul>
-    </section>
+/* ======= Main Layout ======= */
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 1rem;
+}
 
-    <section class="frost-card">
-      <h2>Want to Start Your Journey?</h2>
-      <p>If you're seeking more — if the world has left you empty — there is a Savior who is calling you by name. His name is Jesus. Open a Bible. Start reading the Gospel of John. Pray, even if you don't know what to say. He is listening.</p>
-      <p><a href="https://cornerstonechapel.net/media" target="_blank">Start Listening to the Word</a></p>
-    </section>
+/* ======= Frost Card Effect ======= */
+.frost-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
+  padding: 2rem;
+  margin: 1.5rem 0;
+  width: 90%;
+  max-width: 900px;
+  box-shadow: 0 0 20px #00ff9f55, inset 0 0 10px rgba(88,166,255,0.2);
+  animation: fadeInUp 1s ease forwards;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
 
-  </main>
+.frost-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 30px #00ff9f88, inset 0 0 20px rgba(88,166,255,0.4);
+}
 
-  <footer>
-    <p><span class="terminal-text">&copy; 2025</span> Isai Valdez | Built on Christ Alone.</p>
-  </footer>
-</body>
-</html>
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ======= Typography ======= */
+h1.hero {
+  font-size: 3rem;
+  font-family: 'Orbitron', sans-serif;
+  color: #58a6ff;
+  text-shadow: 0 0 12px #58a6ff, 0 0 24px #00ff9f;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { text-shadow: 0 0 12px #58a6ff, 0 0 24px #00ff9f; }
+  50% { text-shadow: 0 0 20px #00ff9f, 0 0 40px #58a6ff; }
+  100% { text-shadow: 0 0 12px #58a6ff, 0 0 24px #00ff9f; }
+}
+
+.sub-hero {
+  font-size: 1.3rem;
+  color: #00ff9f;
+  text-shadow: 0 0 6px #00ff9f;
+  margin-top: 1rem;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #00ff9f;
+  text-shadow: 0 0 6px #00ff9f;
+}
+
+a {
+  color: #58a6ff;
+  text-decoration: none;
+  transition: color 0.3s, text-shadow 0.3s;
+}
+
+a:hover {
+  color: #00ff9f;
+  text-shadow: 0 0 8px #00ff9f;
+}
+
+.bible-verse {
+  font-style: italic;
+  margin-top: 1rem;
+  color: #c9d1d9;
+  font-size: 1.1rem;
+}
+
+/* ======= Responsive Tweaks ======= */
+@media (max-width: 600px) {
+  h1.hero {
+    font-size: 2.2rem;
+  }
+  .nav-bar a {
+    display: block;
+    margin: 0.5rem 0;
+  }
+  .frost-card {
+    padding: 1.5rem;
+  }
+}
+
