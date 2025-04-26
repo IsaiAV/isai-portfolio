@@ -4,161 +4,133 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Isai Valdez | Cybersecurity Portfolio</title>
-  <meta name="description" content="Cyber-lab portfolio of Isai Valdez. Explore OSINT tools, network defense projects, and tactical intelligence systems." />
+  <meta name="description" content="Faith-driven cybersecurity portfolio of Isai Valdez. Explore OSINT tools, network defense projects, and tactical intelligence systems." />
   <meta name="author" content="Isai Valdez" />
   <meta property="og:title" content="Isai Valdez | Cybersecurity Portfolio" />
-  <meta property="og:description" content="Cutting-edge projects in OSINT, network security, and threat intelligence." />
-  <meta property="og:type" content="website" />
+  <meta property="og:description" content="Cutting-edge projects in OSINT, network security, and tactical faith-driven operations." />
   <meta property="og:image" content="https://isaivaldez.github.io/isai-portfolio/assets/images/preview.jpg" />
   <meta property="og:url" content="https://isaivaldez.github.io/isai-portfolio/" />
-  <link rel="stylesheet" href="styles.css" />
-  <link rel="icon" href="/assets/images/favicon.png" type="image/png" />
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css">
+
   <style>
-    #preloader { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #0d1117; display: flex; align-items: center; justify-content: center; z-index: 9999; color: #58a6ff; font-family: monospace; font-size: 1.2rem; }
-    .hidden-loader { display: none; }
-    #commandBar { position: fixed; bottom: 0; width: 100%; background: rgba(0, 0, 0, 0.9); color: #00ff9f; font-family: monospace; font-size: 0.9rem; padding: 0.5rem 1rem; display: none; z-index: 10000; }
-    #noiseOverlay { content: ""; position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; background: url('https://www.transparenttextures.com/patterns/asfalt-dark.png') repeat;
- opacity: 0.03; z-index: 1; }
-    #helpModal { display: none; position: fixed; top: 20%; left: 50%; transform: translateX(-50%); background: #0f0f0f; color: #58a6ff; border: 1px solid #58a6ff; border-radius: 10px; font-family: monospace; padding: 1.5rem; z-index: 10001; max-width: 90%; }
-  </style>
-  <script>
-    function initShadowOS() {
-      console.log("\u001b[1;36mWelcome to ShadowOS - Tactical Mode Activated\u001b[0m");
-      alert("ShadowOS Terminal Access: Layer 1 Ready");
-      document.body.style.background = 'radial-gradient(circle, #0f0f0f, #000000)';
+    body {
+      margin: 0;
+      background: radial-gradient(#0d1117, #000000);
+      font-family: 'Poppins', sans-serif;
+      color: #c9d1d9;
+      overflow-x: hidden;
     }
+
+    #preloader {
+      position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #0d1117;
+      display: flex; align-items: center; justify-content: center;
+      z-index: 9999;
+      font-family: 'Orbitron', monospace;
+      font-size: 1.5rem;
+      color: #58a6ff;
+      animation: typing 2s steps(30) 1 normal both;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+    }
+
+    header, footer {
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+
+    .nav-bar a {
+      margin: 0 1rem;
+      text-decoration: none;
+      color: #58a6ff;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    .nav-bar a:hover {
+      color: #00ff9f;
+    }
+
+    main {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem 1rem;
+    }
+
+    .frost-card {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 20px;
+      padding: 2rem;
+      margin: 1rem;
+      width: 90%;
+      max-width: 800px;
+      box-shadow: 0 0 20px #00ff9f44;
+      animation: fadeInUp 1s ease;
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .glow-title {
+      font-size: 2.5rem;
+      color: #00ff9f;
+      text-shadow: 0 0 10px #00ff9f;
+      font-family: 'Orbitron', sans-serif;
+    }
+
+    .glow-text {
+      color: #58a6ff;
+      text-shadow: 0 0 8px #58a6ff;
+    }
+
+    a {
+      color: #58a6ff;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+    a:hover {
+      color: #00ff9f;
+    }
+
+    .bible-verse {
+      font-style: italic;
+      color: #c9d1d9;
+      margin-top: 1rem;
+      font-size: 1.1rem;
+      text-align: center;
+    }
+  </style>
+
+  <script>
     window.addEventListener('DOMContentLoaded', () => {
       setTimeout(() => document.getElementById('preloader').classList.add('hidden-loader'), 2000);
     });
-    document.addEventListener('keydown', e => {
-      if (e.ctrlKey && e.altKey && e.key === 'C') {
-        alert("Tactical Uplink Activated");
-        document.body.style.background = 'radial-gradient(#1f1f1f, #000)';
-      }
-      if (e.key === '/' || e.key === ':') {
-        document.getElementById('commandBar').style.display = 'block';
-      }
-      if (e.key === '?' || e.key.toLowerCase() === 'h') {
-        document.getElementById('helpModal').style.display = 'block';
-      }
-    });
   </script>
+
 </head>
-<body class="cyber-bg matrix-bg">
-  <div id="preloader">[ initializing core . . . ]</div>
-  
-  <!-- Shadow Console -->
-<div id="commandConsole">
-  <div class="console-output" id="consoleOutput"></div>
-  <div class="console-input">
-    <label for="terminalInput">: shadow_console@valdez ></label>
-    <input id="terminalInput" type="text" autocomplete="off" placeholder="type a command..." />
-  <script>
-  const consoleEl = document.getElementById('commandConsole');
-  const inputEl = document.getElementById('terminalInput');
-  const outputEl = document.getElementById('consoleOutput');
-  let history = [];
-  let historyIndex = -1;
-  let consoleOpen = false;
 
-  const typeResponse = (text, delay = 30) => {
-    let i = 0;
-    const line = document.createElement('div');
-    outputEl.appendChild(line);
-    const interval = setInterval(() => {
-      if (i < text.length) {
-        line.textContent += text[i++];
-        outputEl.scrollTop = outputEl.scrollHeight;
-      } else {
-        clearInterval(interval);
-      }
-    }, delay);
-  };
-
-  const executeCommand = (cmd) => {
-    const lowerCmd = cmd.toLowerCase();
-    if (lowerCmd === 'help') {
-      typeResponse('📖 Available Commands:\n- help\n- exit\n- clear\n- uplink\n- whoami');
-    } else if (lowerCmd === 'uplink') {
-      typeResponse('🛰️ Uplink established. Grid connection confirmed.');
-    } else if (lowerCmd === 'exit') {
-      closeConsole();
-    } else if (lowerCmd === 'clear') {
-      outputEl.innerHTML = '';
-    } else if (lowerCmd === 'whoami') {
-      typeResponse('🔐 Isai Valdez – Cybersecurity Architect • OSINT • Tactical Code');
-    } else {
-      typeResponse(`⚠️ Unknown command: '${cmd}'`);
-    }
-  };
-
-  const openConsole = () => {
-    consoleEl.style.display = 'flex';
-    inputEl.focus();
-    consoleOpen = true;
-  };
-
-  const closeConsole = () => {
-    consoleEl.style.display = 'none';
-    inputEl.value = '';
-    historyIndex = -1;
-    consoleOpen = false;
-  };
-
-  document.addEventListener('keydown', (e) => {
-    if ((e.key === '/' || e.key === ':') && !consoleOpen) {
-      openConsole();
-    }
-    if (e.key === 'Escape' && consoleOpen) {
-      closeConsole();
-    }
-
-    if (e.key === 'Enter' && consoleOpen) {
-      const cmd = inputEl.value.trim();
-      if (cmd !== '') {
-        outputEl.innerHTML += `\n> ${cmd}`;
-        history.unshift(cmd);
-        executeCommand(cmd);
-        inputEl.value = '';
-      }
-    }
-
-    if (consoleOpen && e.key === 'ArrowUp') {
-      if (history.length > 0 && historyIndex < history.length - 1) {
-        historyIndex++;
-        inputEl.value = history[historyIndex];
-      }
-    }
-
-    if (consoleOpen && e.key === 'ArrowDown') {
-      if (historyIndex > 0) {
-        historyIndex--;
-        inputEl.value = history[historyIndex];
-      } else {
-        inputEl.value = '';
-        historyIndex = -1;
-      }
-    }
-  });
-</script>
-
-  </div>
-  
-  
-</div>
-
-  <div id="noiseOverlay"></div>
-  <div id="helpModal">
-    <strong>Command Console Help</strong><br><br>
-    • <code>Ctrl + Alt + C</code> → Toggle Tactical Theme<br>
-    • <code>/</code> or <code>:</code> → Open Console<br>
-    • <code>H</code> or <code>?</code> → Help Dialog<br>
-    <br><em>Surveillance deflected. Proceed with extraction.</em>
-  </div>
+<body>
+  <div id="preloader">[ initializing core... ]</div>
 
   <header>
-    <h1 class="typewriter">Isai Valdez</h1>
-    <p class="glow-text">Cybersecurity • OSINT • Network Engineering</p>
+    <h1 class="glow-title">Isai Valdez</h1>
+    <p class="glow-text">Cybersecurity • OSINT • Faith-driven Missions</p>
     <nav class="nav-bar">
       <a href="projects.html">Projects</a>
       <a href="resume.html">Résumé</a>
@@ -167,43 +139,39 @@
   </header>
 
   <main>
-    <section id="intro" class="frost-card fade-in fade-delay-1">
-      <h2>Welcome</h2>
-      <p>I build tactical cybersecurity tools, intelligence labs, and hands-on environments to detect, defend, and demonstrate real-world threat mitigation strategies. This portfolio showcases my most meaningful work across OSINT, network security, and applied defense systems.</p>
+    <section id="intro" class="frost-card">
+      <h2 class="glow-text">Welcome</h2>
+      <p>I build tactical cybersecurity labs, OSINT environments, and open-source threat detection systems — fueled by a mission bigger than myself. Jesus is the foundation of my work and my life.</p>
     </section>
 
-    <section id="featured-projects" class="fade-in fade-delay-2">
+    <section class="frost-card">
+      <h3 class="glow-text">Favorite Bible Verse</h3>
+      <p class="bible-verse">"For what shall it profit a man, if he shall gain the whole world, and lose his own soul?"<br>— <strong>Mark 8:36</strong></p>
+    </section>
+
+    <section id="featured-projects" class="fade-in">
       <h2 class="glow-title">Featured Projects</h2>
 
       <div class="project frost-card">
         <h3><a href="https://github.com/IsaiAV/network-security-lab" target="_blank">Network Security Lab</a></h3>
-        <p>A modular home-lab environment with real configurations for firewalls, VPNs, and IDS/IPS tools. Includes automation scripts, logs, diagrams, and active threat detection workflows.</p>
-        <details>
-          <summary>How I built and tested this lab</summary>
-          <ul>
-            <li><strong>Firewalls:</strong> <code>iptables</code>, <code>curl</code>, <code>nmap</code> testing.</li>
-            <li><strong>IDS:</strong> Custom Suricata signatures w/ DNS & User-Agent triggers.</li>
-            <li><strong>Brute Force:</strong> Simulated SSH attacks using Fail2Ban response.</li>
-            <li><strong>VPNs:</strong> WireGuard & OpenVPN tunneling and packet flow validation.</li>
-            <li><strong>Logs:</strong> Captured structured logs across all defensive layers.</li>
-          </ul>
-        </details>
+        <p>A modular home-lab for firewalls, VPNs, IDS/IPS, active threat detection, and tactical defense strategies.</p>
       </div>
 
       <div class="project frost-card">
         <h3><a href="https://github.com/IsaiAV/shadowbreak-osint-core" target="_blank">Shadowbreak OSINT Core</a></h3>
-        <p>Symbolic OSINT toolkit using entropy detection, grooming pattern analysis, and narrative drift mapping via λ∇Ψ engine. Built to trace deep symbolic fields and behavioral anomalies.</p>
+        <p>Symbolic OSINT toolkit tracing narrative drift and behavioral anomalies through entropy mapping.</p>
       </div>
 
       <div class="project frost-card">
-        <h3><a href="https://shadowbreak-backend.onrender.com" target="_blank">Shadowbreak Project Website (Live)</a></h3>
-        <p>Web-based hub for the anti-trafficking initiative. Includes public tools, awareness campaigns, and system briefings powered by the Shadowbreak OSINT backend.</p>
+        <h3><a href="https://shadowbreak-backend.onrender.com" target="_blank">Shadowbreak Project</a></h3>
+        <p>Web-based anti-trafficking platform for awareness, OSINT tooling, and operations briefings.</p>
       </div>
     </section>
   </main>
 
   <footer>
-    <p><span class="terminal-text">© 2025</span> Isai Valdez. Tactical code. Operational purpose.</p>
+    <p><span class="terminal-text">&copy; 2025</span> Isai Valdez — Tactical code, Eternal purpose.</p>
   </footer>
 </body>
 </html>
+
