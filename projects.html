@@ -1,205 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Projects | Isai Valdez</title>
-  <link rel="stylesheet" href="styles.css" />
-  <meta name="description" content="Explore cybersecurity and OSINT projects by Isai Valdez including tactical lab builds, detection tools, and threat intel systems." />
-  <meta property="og:title" content="Isai Valdez | Cyber Projects" />
-  <meta property="og:description" content="Explore Isai's hands-on cybersecurity lab, OSINT tools, and tactical systems." />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="robots" content="index, follow" />
-  <meta name="theme-color" content="#0d1117" />
-  <meta name="keywords" content="cybersecurity, osint, threat intelligence, network lab, isai valdez portfolio" />
-  <link rel="canonical" href="https://isaivaldez.github.io/isai-portfolio/projects.html" />
-  <link rel="icon" href="/assets/images/favicon.png" type="image/png" />
-  <meta name="author" content="Isai Valdez" />
-  <meta name="generator" content="Custom HTML & CSS only, no frameworks" />
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="/assets/images/favicon.png" type="image/png">
+
+  <meta name="description" content="Explore cybersecurity, OSINT projects, and faith-centered initiatives by Isai Valdez.">
+  <meta property="og:title" content="Isai Valdez | Cyber & Faith Projects">
+  <meta property="og:description" content="Hands-on cybersecurity labs, OSINT tools, robotics, and faith-driven missions.">
+  <meta name="theme-color" content="#0d1117">
+
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
   <style>
-    #preloader { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #0d1117; display: flex; align-items: center; justify-content: center; z-index: 9999; color: #58a6ff; font-family: monospace; font-size: 1.2rem; }
-    .hidden-loader { display: none; }
-    #commandBar { position: fixed; bottom: 0; width: 100%; background: rgba(0, 0, 0, 0.9); color: #00ff9f; font-family: monospace; font-size: 0.9rem; padding: 0.5rem 1rem; display: none; z-index: 10000; }
-    #noiseOverlay { content: ""; position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; background: url('https://www.transparenttextures.com/patterns/asfalt-dark.png') repeat;
- opacity: 0.03; z-index: 1; }
-    #helpModal { display: none; position: fixed; top: 20%; left: 50%; transform: translateX(-50%); background: #0f0f0f; color: #58a6ff; border: 1px solid #58a6ff; border-radius: 10px; font-family: monospace; padding: 1.5rem; z-index: 10001; max-width: 90%; }
+    body {
+      background: radial-gradient(#0d1117, #000);
+      font-family: 'Poppins', sans-serif;
+      color: #c9d1d9;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+    }
+    header, footer {
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+    .nav-bar a {
+      margin: 0 1rem;
+      text-decoration: none;
+      color: #58a6ff;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    .nav-bar a:hover {
+      color: #00ff9f;
+    }
+    main {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem 1rem;
+    }
+    .frost-card {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 20px;
+      padding: 2rem;
+      margin: 1rem;
+      width: 90%;
+      max-width: 800px;
+      box-shadow: 0 0 20px #00ff9f44;
+      animation: fadeInUp 1s ease;
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .glow-title {
+      font-size: 2.5rem;
+      color: #00ff9f;
+      text-shadow: 0 0 10px #00ff9f;
+      font-family: 'Orbitron', sans-serif;
+    }
+    .glow-text {
+      color: #58a6ff;
+      text-shadow: 0 0 8px #58a6ff;
+    }
+    a {
+      color: #58a6ff;
+      text-decoration: none;
+      transition: all 0.3s;
+    }
+    a:hover {
+      color: #00ff9f;
+    }
+    .bible-verse {
+      font-style: italic;
+      text-align: center;
+      margin-top: 1rem;
+    }
   </style>
-  <script>
-    window.addEventListener('DOMContentLoaded', () => {
-      setTimeout(() => document.getElementById('preloader').classList.add('hidden-loader'), 2000);
-    });
-    document.addEventListener('keydown', (e) => {
-      if (e.ctrlKey && e.altKey && e.key === 'P') {
-        alert("DevMode Activated: Shadowbreak Console Ready");
-        document.body.style.filter = "invert(1) hue-rotate(180deg)";
-      }
-      if (e.ctrlKey && e.altKey && e.key === 'C') {
-        alert("🛰️ Tactical Uplink Activated");
-        document.body.style.background = 'radial-gradient(#1f1f1f, #000)';
-      }
-      if (e.key === '/' || e.key === ':') {
-        document.getElementById('commandBar').style.display = 'block';
-      }
-      if (e.key === '?' || e.key.toLowerCase() === 'h') {
-        document.getElementById('helpModal').style.display = 'block';
-      }
-    });
-  </script>
+
 </head>
-<body class="cyber-bg matrix-bg">
-  <div id="preloader">[ loading mission data . . . ]</div>
-
-  
-  <!-- Shadow Console -->
-<div id="commandConsole">
-  <div class="console-output" id="consoleOutput"></div>
-  <div class="console-input">
-    <label for="terminalInput">: shadow_console@valdez ></label>
-    <input id="terminalInput" type="text" autocomplete="off" placeholder="type a command..." />
- <script>
-  const consoleEl = document.getElementById('commandConsole');
-  const inputEl = document.getElementById('terminalInput');
-  const outputEl = document.getElementById('consoleOutput');
-  let history = [];
-  let historyIndex = -1;
-  let consoleOpen = false;
-
-  const typeResponse = (text, delay = 30) => {
-    let i = 0;
-    const line = document.createElement('div');
-    outputEl.appendChild(line);
-    const interval = setInterval(() => {
-      if (i < text.length) {
-        line.textContent += text[i++];
-        outputEl.scrollTop = outputEl.scrollHeight;
-      } else {
-        clearInterval(interval);
-      }
-    }, delay);
-  };
-
-  const executeCommand = (cmd) => {
-    const lowerCmd = cmd.toLowerCase();
-    if (lowerCmd === 'help') {
-      typeResponse('📖 Available Commands:\n- help\n- exit\n- clear\n- uplink\n- whoami');
-    } else if (lowerCmd === 'uplink') {
-      typeResponse('🛰️ Uplink established. Grid connection confirmed.');
-    } else if (lowerCmd === 'exit') {
-      closeConsole();
-    } else if (lowerCmd === 'clear') {
-      outputEl.innerHTML = '';
-    } else if (lowerCmd === 'whoami') {
-      typeResponse('🔐 Isai Valdez – Cybersecurity Architect • OSINT • Tactical Code');
-    } else {
-      typeResponse(`⚠️ Unknown command: '${cmd}'`);
-    }
-  };
-
-  const openConsole = () => {
-    consoleEl.style.display = 'flex';
-    inputEl.focus();
-    consoleOpen = true;
-  };
-
-  const closeConsole = () => {
-    consoleEl.style.display = 'none';
-    inputEl.value = '';
-    historyIndex = -1;
-    consoleOpen = false;
-  };
-
-  document.addEventListener('keydown', (e) => {
-    if ((e.key === '/' || e.key === ':') && !consoleOpen) {
-      openConsole();
-    }
-    if (e.key === 'Escape' && consoleOpen) {
-      closeConsole();
-    }
-
-    if (e.key === 'Enter' && consoleOpen) {
-      const cmd = inputEl.value.trim();
-      if (cmd !== '') {
-        outputEl.innerHTML += `\n> ${cmd}`;
-        history.unshift(cmd);
-        executeCommand(cmd);
-        inputEl.value = '';
-      }
-    }
-
-    if (consoleOpen && e.key === 'ArrowUp') {
-      if (history.length > 0 && historyIndex < history.length - 1) {
-        historyIndex++;
-        inputEl.value = history[historyIndex];
-      }
-    }
-
-    if (consoleOpen && e.key === 'ArrowDown') {
-      if (historyIndex > 0) {
-        historyIndex--;
-        inputEl.value = history[historyIndex];
-      } else {
-        inputEl.value = '';
-        historyIndex = -1;
-      }
-    }
-  });
-</script>
-
-  
-  </div>
-</div>
-
-  <div id="noiseOverlay"></div>
-  <div id="helpModal">
-    <strong>Command Console Help</strong><br><br>
-    • <code>Ctrl + Alt + C</code> → Tactical Mode<br>
-    • <code>/</code> or <code>:</code> → Open Console<br>
-    • <code>H</code> or <code>?</code> → Help Dialog<br>
-    <br><em>System protocols initialized. Terminal stable.</em>
-  </div>
-
+<body>
   <header>
-    <h1 class="glow-title" aria-label="Project Terminal">Project Terminal</h1>
-    <nav class="nav-bar" role="navigation" aria-label="Main navigation">
+    <h1 class="glow-title">Project Terminal</h1>
+    <nav class="nav-bar">
       <a href="index.html">Home</a>
       <a href="resume.html">Résumé</a>
       <a href="contact.html">Contact</a>
     </nav>
   </header>
 
-  <main role="main">
-    <section class="fade-in fade-delay-1">
+  <main>
+    <section class="frost-card">
+      <h2 class="glow-text">Finding True Purpose</h2>
+      <p>Through all my cybersecurity projects and achievements, I realized that none of it filled the deep need inside me — only Jesus Christ could. Now, every line of code and every project I build is anchored in Him, my true foundation. (<strong>Psalm 127:1</strong>)</p>
+      <p class="bible-verse">"Unless the LORD builds the house, the builders labor in vain." — Psalm 127:1</p>
+      <p><a href="https://cornerstonechapel.net/" target="_blank">Visit My Church: Cornerstone Chapel</a></p>
+    </section>
+
+    <section class="frost-card">
       <h2 class="glow-text">Project Portfolio</h2>
 
-      <div class="project frost-card" tabindex="0" aria-label="Network Security Lab project">
+      <div class="project frost-card">
         <h3><a href="https://github.com/IsaiAV/network-security-lab" target="_blank">Network Security Lab</a></h3>
-        <p>Hands-on cybersecurity environment with real configs for firewalls, VPNs, and IDS. Includes logs, automation, and detailed testing examples.</p>
-        <details>
-          <summary>Testing Breakdown</summary>
-          <ul>
-            <li>Simulated attacks to trigger Suricata rules</li>
-            <li>SSH brute force to test Fail2Ban response</li>
-            <li><code>nmap</code> & <code>curl</code> used for firewall testing</li>
-            <li>VPN routing + encryption confirmed</li>
-            <li>Structured logs captured across all tools</li>
-          </ul>
-        </details>
+        <p>Hands-on modular cybersecurity environment with firewalls, VPNs, IDS/IPS, and active threat simulations.</p>
       </div>
 
-      <div class="project frost-card" tabindex="0" aria-label="Shadowbreak OSINT Core">
+      <div class="project frost-card">
         <h3><a href="https://github.com/IsaiAV/shadowbreak-osint-core" target="_blank">Shadowbreak OSINT Core</a></h3>
-        <p>Symbolic OSINT toolkit with entropy scanning and grooming detection, designed to analyze narrative trauma patterns using AI + NLP. Built on the λ∇Ψ equation for symbolic intelligence.</p>
+        <p>AI-powered OSINT toolkit detecting narrative drift, grooming, and trafficking patterns with symbolic intelligence models.</p>
       </div>
 
-      <div class="project frost-card" tabindex="0" aria-label="Shadowbreak Live Website">
-        <h3><a href="https://shadowbreak-backend.onrender.com" target="_blank">Shadowbreak Project Website (Live)</a></h3>
-        <p>Public portal for my nonprofit anti-trafficking system. Includes education tools, mission resources, and tactical awareness campaigns powered by AI-driven OSINT.</p>
+      <div class="project frost-card">
+        <h3><a href="https://shadowbreak-backend.onrender.com" target="_blank">Shadowbreak Project Website</a></h3>
+        <p>Public anti-trafficking portal featuring tools, campaigns, and research briefs powered by AI-driven OSINT analysis.</p>
       </div>
+
+      <div class="project frost-card">
+        <h3>Dream Crashers – Surreal Platformer for Meta XR</h3>
+        <p>A dreamlike mobile-first game created with Unreal Engine 5 for the Meta Developer OS ecosystem. Early development.</p>
+      </div>
+
+      <div class="project frost-card">
+        <h3><a href="https://hackaday.io/isai" target="_blank">Modular Robotics System – Powered by ROS2</a></h3>
+        <p>Building an experimental modular robot with environmental awareness, navigation, and symbolic AI integration.</p>
+      </div>
+
+      <div class="project frost-card">
+        <h3>Shadow Systems Theory (SST) — Foundational Research</h3>
+        <p>A theoretical framework modeling trauma as a symbolic distortion field using narrative physics and entropy mapping.</p>
+        <p><a href="https://linktr.ee/IsaiValdez" target="_blank">Research Hub</a></p>
+      </div>
+
+      <div class="project frost-card">
+        <h3>The Weight No One Sees – Novel in Progress</h3>
+        <p>A deeply spiritual novel exploring unseen trauma, redemption, and faith through the eyes of a struggling father.</p>
+      </div>
+    </section>
+
+    <section class="frost-card">
+      <h2 class="glow-text">Christian Resources</h2>
+      <ul>
+        <li><a href="https://cornerstonechapel.net/" target="_blank">Cornerstone Chapel</a></li>
+        <li><a href="https://biblegateway.com/" target="_blank">Bible Gateway</a></li>
+        <li><a href="https://blueletterbible.org/" target="_blank">Blue Letter Bible</a></li>
+        <li><a href="https://desiringgod.org/" target="_blank">Desiring God Ministries</a></li>
+      </ul>
+      <p class="bible-verse">"But seek first the kingdom of God and His righteousness, and all these things shall be added to you." — Matthew 6:33</p>
     </section>
   </main>
 
-  <footer role="contentinfo">
-    <p><span class="terminal-text">© 2025</span> Isai Valdez | All systems active</p>
+  <footer>
+    <p><span class="terminal-text">&copy; 2025</span> Isai Valdez | Built on Christ, the true foundation.</p>
   </footer>
 </body>
 </html>
+
