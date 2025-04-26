@@ -4,14 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Résumé | Isai Valdez</title>
-  <link rel="stylesheet" href="styles.css">
-  <link rel="icon" href="/assets/images/favicon.png" type="image/png">
-
   <meta name="description" content="Résumé of Isai Valdez - Cybersecurity Leader, OSINT Expert, Faith-driven Technologist.">
   <meta property="og:title" content="Isai Valdez Résumé">
   <meta property="og:description" content="Explore the professional journey and certifications of cybersecurity leader Isai Valdez.">
   <meta name="theme-color" content="#0d1117">
 
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="/assets/images/favicon.png" type="image/png">
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 
@@ -22,6 +21,7 @@
       color: #c9d1d9;
       margin: 0;
       padding: 0;
+      scroll-behavior: smooth;
     }
     header, footer {
       text-align: center;
@@ -32,6 +32,7 @@
       text-decoration: none;
       color: #58a6ff;
       font-weight: bold;
+      transition: color 0.3s;
     }
     .nav-bar a:hover {
       color: #00ff9f;
@@ -52,21 +53,45 @@
       width: 90%;
       max-width: 900px;
       box-shadow: 0 0 20px #00ff9f44;
+      animation: fadeInUp 1s ease both;
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
     h2 {
       color: #00ff9f;
       text-shadow: 0 0 5px #00ff9f;
+      margin-bottom: 1rem;
     }
     a {
       color: #58a6ff;
       text-decoration: none;
+      transition: all 0.3s ease;
     }
     a:hover {
       color: #00ff9f;
     }
+    ul {
+      text-align: left;
+      padding-left: 1.5rem;
+    }
+    li {
+      margin-bottom: 0.5rem;
+    }
+    footer {
+      font-size: 0.9rem;
+      color: #8b949e;
+      border-top: 1px solid #222;
+      box-shadow: 0 -3px 8px rgba(0, 0, 0, 0.05);
+    }
+    @media (max-width: 600px) {
+      header h1 { font-size: 2rem; }
+      .nav-bar a { display: block; margin: 0.5rem 0; }
+    }
   </style>
-
 </head>
+
 <body>
   <header>
     <h1 class="glow-title">Résumé</h1>
@@ -74,6 +99,7 @@
       <a href="index.html">Home</a>
       <a href="projects.html">Projects</a>
       <a href="contact.html">Contact</a>
+      <a href="faith.html">Faith</a>
     </nav>
   </header>
 
@@ -82,45 +108,44 @@
     <section class="frost-card">
       <h2>About</h2>
       <p><strong>"For what does it profit a man to gain the whole world and lose his soul?" — Mark 8:36</strong></p>
-      <p>This verse is my life's compass. Titles, accomplishments, and applause fade — but integrity, purpose, and faith endure. I'm not here to impress. I'm here to serve, to love, and to be a vessel of God's purpose in the world. My journey is stitched with grace, humility, and resilience — not to build my name, but to glorify His.</p>
+      <p>I live by this verse. Titles and applause fade — but faith, integrity, and purpose in Christ endure forever. My mission: Build with excellence, lead with love, live for eternity.</p>
     </section>
 
     <section class="frost-card">
       <h2>Professional Summary</h2>
-      <p>Strategic and impact-driven cybersecurity professional with 5+ years across tactical operations, cybersecurity defense, OSINT research, nonprofit leadership, and faith-centered service initiatives.</p>
+      <p>Faith-driven cybersecurity architect and operations strategist with 5+ years across tactical cyber-defense, OSINT intelligence, nonprofit leadership, and humanitarian resilience projects.</p>
     </section>
 
     <section class="frost-card">
       <h2>Experience</h2>
       <ul>
-        <li><strong>Director of Operations</strong> – Shadowbreak Project (2025 - Present)</li>
-        <li><strong>Vehicle Operations Specialist III</strong> – Rivian (2024 - 2025)</li>
-        <li><strong>Operations Advisor II</strong> – Tesla (2022 - 2024)</li>
-        <li><strong>Naval Operations Support Specialist</strong> – U.S. Navy (2020 - 2021)</li>
+        <li><strong>Director of Operations</strong> — Shadowbreak Project (2025 - Present)</li>
+        <li><strong>Vehicle Operations Specialist III</strong> — Rivian (2024 - 2025)</li>
+        <li><strong>Operations Advisor II</strong> — Tesla (2022 - 2024)</li>
+        <li><strong>Naval Operations Support Specialist</strong> — U.S. Navy (2020 - 2021)</li>
       </ul>
     </section>
 
     <section class="frost-card">
       <h2>Education</h2>
       <ul>
-        <li><strong>Western Governors University</strong> – B.S. Network Engineering & Security (Expected 2025)</li>
+        <li><strong>Western Governors University</strong> — B.S. Network Engineering & Security (Expected 2025)</li>
       </ul>
     </section>
 
     <section class="frost-card">
       <h2>Certifications</h2>
-      <p>View full credentials: <a href="https://www.linkedin.com/in/isaivaldez" target="_blank">LinkedIn Profile</a></p>
+      <p>View full list: <a href="https://www.linkedin.com/in/isaivaldez" target="_blank">LinkedIn Profile</a></p>
       <ul>
-        <li>Google IT Support Certificate</li>
+        <li>Google IT Support</li>
         <li>Six Sigma Black Belt (CSSBB)</li>
-        <li>FEMA Homeland Security Certifications</li>
-        <li>ROS2 Robotics Certificate</li>
+        <li>FEMA Cybersecurity & Homeland Security</li>
+        <li>ROS2 Robotics Certification</li>
         <li>Google Data Analytics</li>
         <li>Advanced OSINT Methodologies</li>
         <li>Strategic Foresight & Innovation (Duke, Michigan, Johns Hopkins)</li>
         <li>Psychological First Aid (Johns Hopkins)</li>
         <li>Arabic for Beginners (Khalifa University)</li>
-        <li>Wilderness First Aid (University of Colorado)</li>
       </ul>
     </section>
 
@@ -128,13 +153,11 @@
       <h2>Skills & Expertise</h2>
       <ul>
         <li>Cyber Threat Intelligence (CTI)</li>
-        <li>OSINT Research & Analysis</li>
-        <li>Network Security & Defense</li>
-        <li>Incident Response & Disaster Preparedness</li>
-        <li>Strategic Operations Leadership</li>
+        <li>Advanced OSINT Research</li>
+        <li>Network Security & Infrastructure</li>
+        <li>Disaster Preparedness & Incident Response</li>
+        <li>Leadership & Organizational Strategy</li>
         <li>Human-Centered Threat Analysis</li>
-        <li>Red Team & Blue Team Operations</li>
-        <li>Technical Communications</li>
       </ul>
     </section>
 
@@ -150,7 +173,7 @@
   </main>
 
   <footer>
-    <p><span class="terminal-text">&copy; 2025</span> Isai Valdez | Built on Christ, Forged by Purpose.</p>
+    <p><span class="terminal-text">&copy; 2025</span> Isai Valdez | Built for Christ, Fueled by Purpose.</p>
   </footer>
 </body>
 </html>
