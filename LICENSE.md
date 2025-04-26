@@ -1,4 +1,4 @@
-# 📜 License - MIT License
+# License - MIT License
 
 Copyright (c) 2025 **Isai Valdez**
 
@@ -9,7 +9,7 @@ Permission is hereby granted, free of charge, to any person obtaining a copy of 
 
 ---
 
-## ⚡ Disclaimer
+## Disclaimer
 
 This project is provided **\"as is\"**, without warranty of any kind, express or implied, including but not limited to the warranties of merchantability, fitness for a particular purpose, and noninfringement.
 
@@ -17,7 +17,7 @@ In no event shall the authors or copyright holders be liable for any claim, dama
 
 ---
 
-## 🛡️ Faith Statement
+## Faith Statement
 
 This portfolio is built on the foundation of my Christian faith.  
 While the code is freely available, the purpose behind it is to serve, uplift, and honor **Jesus Christ**.
