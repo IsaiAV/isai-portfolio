@@ -63,10 +63,10 @@ This portfolio exists to share my technical skills, my faith, and my journey —
 
 ---
 
-```javascript
 
 
-Faith Resources
+Faith Resources:
+
 Cornerstone Chapel
 
 Bible Gateway
@@ -74,6 +74,7 @@ Bible Gateway
 Blue Letter Bible
 
 Desiring God
+
 
 "Unless the LORD builds the house, the builders labor in vain."
 — Psalm 127:1
